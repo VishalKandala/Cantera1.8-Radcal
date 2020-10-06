@@ -71,6 +71,8 @@ PYTHON_PACKAGE=${PYTHON_PACKAGE:="full"}
 # 'python2' or as 'python'.  If it is not on the PATH, or has a
 # different name, set this to the full path to the Python interpreter.
 PYTHON_CMD=${PYTHON_CMD:="default"}
+#PYTHON_CMD=${PYTHON_CMD:="usr/bin/python2.6"}
+
 
 
 # The Cantera Python interface can be built with either the numarray
@@ -132,7 +134,7 @@ PYTHON_SITE_PACKAGE_TOPDIR=${PYTHON_SITE_PACKAGE_TOPDIR:="/usr/local"}
 #
 # Note that you may need to run 'mex -setup' within MATLAB to
 # configure it for your C++ compiler before running this script.
-BUILD_MATLAB_TOOLBOX=${BUILD_MATLAB_TOOLBOX:="no"}
+BUILD_MATLAB_TOOLBOX=${BUILD_MATLAB_TOOLBOX:="n"}
 MATLAB_CMD=${MATLAB_CMD:="default"}
                              
 #----------- Fortran 90/95 --------------------------------------------------
@@ -147,7 +149,7 @@ MATLAB_CMD=${MATLAB_CMD:="default"}
 #      "n"          Do not build the Fortran 90/95 interface, even if a 
 #                   Fortran 90/95 compiler is installed.
 
-BUILD_F90_INTERFACE=${BUILD_F90_INTERFACE:="no"}
+BUILD_F90_INTERFACE=${BUILD_F90_INTERFACE:="n"}
 
 # The Fortran 90/95 compiler. If set to "default", the script will
 # look for a Fortran 90/95 compiler on your system by the name of
@@ -187,7 +189,7 @@ USER_SRC_DIR="Cantera/user"  # don't change this
 # an additional switch must be turned on. However, compilation
 # of the printing is affected by the following DEBUG_MODE option.
 # This is turned off here by default. 
-DEBUG_MODE=${DEBUG_MODE:='n'}
+DEBUG_MODE=${DEBUG_MODE:='y'}
 
 #----------------------------------------------------------------------
 #         Kernel Configuration
@@ -315,7 +317,7 @@ USE_SUNDIALS=${USE_SUNDIALS:='default'}
 # This is where you installed sundials if you used the --prefix option
 # when you configured sundials. If you didn't use the prefix option,
 # then comment this line out.
-#SUNDIALS_HOME=${SUNDIALS_HOME:=""}
+#SUNDIALS_HOME=${SUNDIALS_HOME:="/usr/local/bin/"}
 
 
 # It is recommended that you install the newest release of sundials 

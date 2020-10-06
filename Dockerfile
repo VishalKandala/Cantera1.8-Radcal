@@ -5,8 +5,8 @@ FROM ubuntu:xenial-20200807
 MAINTAINER "Vishal Indivar Kandala (VIKing)"
 RUN mkdir /pkg/
 ENV PATH="/pkg/:${PATH}"
-WORKDIR /pkg/
-#RUN cd /pkg/
+#WORKDIR /pkg/
+RUN cd /pkg/
 ## Setup: Dependency resolution
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y update   
 ### updating aptitude repository for xenial
@@ -18,14 +18,23 @@ RUN apt-get update
 ### Pulling necessary files for python installation from "Deadsnakes".
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y  python2.6 python2.6-dev
 ### Installing python 2.6.9 on the container
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openssl gcc g++
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y openssl gcc g++ wget git make
 ### Installing openssl for comms; gcc and g++ which are gnu c and c++ compilers.
 RUN DEBIAN_FRONTEND=noninteractive ln -s /usr/bin/python2.6 /usr/bin/python
 ### Hard linking the python2.6 path to the 'python' command.
+#RUN DEBIAN_FRONTEND=noninteractive apt-get install -y wget
+### Installing wget
+RUN DEBIAN_FRONTEND=noninteractive wget https://bootstrap.pypa.io/2.6/get-pip.py
+### Downloading get-pip for py26
+RUN DEBIAN_FRONTEND=noninteractive wget  https://bootstrap.pypa.io/ez_setup.py
+### Downloading setuptools setup
+RUN DEBIAN_FRONTEND=noninteractive apt-get update
+RUN DEBIAN_FRONTEND=noninteractive python ez_setup.py setuptools==2.0
+RUN DEBIAN_FRONTEND=noninteractive python get-pip.py pip==1.4.1
 ### Installing pip
 RUN apt-get update
 ### updating apt
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git
+#RUN DEBIAN_FRONTEND=noninteractive apt-get install -y git
 ### Installing git
 RUN pip install numpy==1.7.0
 ### Installing Numpy 1.7 
@@ -33,13 +42,23 @@ RUN pip install Cython==0.12
 ### Installing Cython 0.12  
 #RUN pip install scipy==0.7.0
 ### Installing Scipy 0.7.0
-#RUN git clone https://github.com/calbaker/Cantera
+RUN git clone https://github.com/VishalKandala/Cantera1.8-Radcal
 ### Downloading Cantera-1.8
-#RUN cd Cantera
-#RUN ./preconfig
+RUN mkdir /pkg/dep/
+RUN cd /pkg/dep/
+RUN DEBIAN_FRONTEND=noninteractive wget https://computing.llnl.gov/projects/sundials/download/sundials-2.3.0.tar.gz
+RUN DEBIAN_FRONTEND=noninteractive tar -xf sundials-2.3.0.tar.gz
+RUN cd sundials-2.3.0
+WORKDIR /sundials-2.3.0/
+RUN ./configure --with-cflags=-fPIC>sundials-comp.output
+RUN make
+RUN make install
+WORKDIR /Cantera1.8-Radcal
+RUN chmod +x preconfig
+RUN ./preconfig>preconfig-c18r.output
 ### Run preconfig
-#RUN make
+RUN make>compile-c18r.output
 ### Generate make files
-#RUN sudo make install
+RUN make install>install-c18r.output
 ### Install from make files
 #RUN source ~/setup_cantera
