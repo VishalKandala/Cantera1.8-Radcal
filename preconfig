@@ -70,8 +70,8 @@ PYTHON_PACKAGE=${PYTHON_PACKAGE:="full"}
 # look for the Python Interpreter somewhere on your PATH, either as
 # 'python2' or as 'python'.  If it is not on the PATH, or has a
 # different name, set this to the full path to the Python interpreter.
-PYTHON_CMD=${PYTHON_CMD:="default"}
-#PYTHON_CMD=${PYTHON_CMD:="usr/bin/python2.6"}
+#PYTHON_CMD=${PYTHON_CMD:="default"}
+PYTHON_CMD=${PYTHON_CMD:="usr/bin/python2.6"}
 
 
 
@@ -86,7 +86,7 @@ USE_NUMERIC=${USE_NUMERIC:="n"}
 USE_NUMPY=${USE_NUMPY:="y"}
 
 if ["$USE_NUMPY" = "y"]; then
-	NUMPY_INC_DIR= `python -c 'import numpy; print numpy.get_include()'`
+	export NUMPY_INC_DIR= `python -c 'import numpy; print numpy.get_include()'`
 fi 
 
 # If numpy was installed using the --home option, set this to the
