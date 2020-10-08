@@ -71,7 +71,7 @@ PYTHON_PACKAGE=${PYTHON_PACKAGE:="full"}
 # 'python2' or as 'python'.  If it is not on the PATH, or has a
 # different name, set this to the full path to the Python interpreter.
 #PYTHON_CMD=${PYTHON_CMD:="default"}
-PYTHON_CMD=${PYTHON_CMD:="usr/local/bin/python2.6"}
+PYTHON_CMD=${PYTHON_CMD:="/usr/local/bin/python2.6"}
 
 
 
