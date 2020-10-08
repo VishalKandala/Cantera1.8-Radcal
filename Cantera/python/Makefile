@@ -52,7 +52,7 @@ win: _winbuild
 _build: $(SRCS) $(LIB_DEPS) Makefile setup.py
 	touch src/pycantera.cpp 
 	/bin/rm -f _build
-	(CXX="g++"; export CXX; CC="g++"; export CC; CFLAGS="$(CXX_FLAGS)"; export CFLAGS; PURIFY=""; export PURIFY; usr/bin/python setup.py build)
+	(CXX="g++"; export CXX; CC="g++"; export CC; CFLAGS="$(CXX_FLAGS)"; export CFLAGS; PURIFY=""; export PURIFY; usr/bin/python2.6 setup.py build)
 	echo 'ok' > _build
 
 #
@@ -69,7 +69,7 @@ endif
 
 _winbuild: $(SRCS) $(WIN_LIB_DEPS) $(CLIB_DLL)
 	touch src/pycantera.cpp 
-	(usr/bin/python setup.py build)
+	(usr/bin/python2.6 setup.py build)
 ifeq ($(use_clib_dll), 1)
 ifeq ($(have_python_site_package_topdir), 1)
 	(/usr/bin/install -c -m 755 $(CLIB_DLL) $(CLIB_EXP)  \
@@ -79,17 +79,17 @@ endif
 	echo 'ok' > _winbuild
 
 minbuild:
-	(usr/bin/python setup.py build)
+	(usr/bin/python2.6 setup.py build)
 
 install:
 ifeq (0,1)
-	(usr/bin/python setup.py install --prefix="/usr/local/cantera")
+	(usr/bin/python2.6 setup.py install --prefix="/usr/local/cantera")
 else
-	(usr/bin/python setup.py install)
+	(usr/bin/python2.6 setup.py install)
 endif
 
 clean:
-	usr/bin/python setup.py clean
+	usr/bin/python2.6 setup.py clean
 	rm -f _build; rm -f _winbuild
 	(cd build; rm -fR *)
 	cd src; rm -f *.o
@@ -98,10 +98,10 @@ depends:
 	echo '-'
 
 test:
-	cd examples; usr/bin/python reactor1.py &> reactor1.out
-	cd examples; usr/bin/python flame1.py  &> flame1.out
-	cd examples; usr/bin/python diamond.py &> diamond.out
-	cd examples; usr/bin/python critProperties.py  &> critProperties.out
+	cd examples; usr/bin/python2.6 reactor1.py &> reactor1.out
+	cd examples; usr/bin/python2.6 flame1.py  &> flame1.out
+	cd examples; usr/bin/python2.6 diamond.py &> diamond.out
+	cd examples; usr/bin/python2.6 critProperties.py  &> critProperties.out
 
 # end of file
 

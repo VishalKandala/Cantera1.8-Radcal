@@ -3,7 +3,7 @@
 INST_DIR=/usr/local/cantera/demos/python/equilibrium/adiabatic_flame
 
 
-PYTHON_CMD = usr/bin/python
+PYTHON_CMD = usr/bin/python2.6
 
 run:
 	$(PYTHON_CMD) adiabatic.py

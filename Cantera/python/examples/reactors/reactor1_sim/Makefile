@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/reactors/reactor1_sim
 
-PYTHON_CMD = usr/bin/python
+PYTHON_CMD = usr/bin/python2.6
 
 run:
 	$(PYTHON_CMD) reactor1.py

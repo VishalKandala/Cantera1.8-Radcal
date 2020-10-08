@@ -366,7 +366,7 @@ configure: failed program was:
 | #define INCL_PURE_FLUIDS 1
 | #define WITH_SPECTRA 1
 | #define WITH_HTML_LOGS 1
-| #define PYTHON_EXE "usr/bin/python"
+| #define PYTHON_EXE "usr/bin/python2.6"
 | #define HAS_NUMPY 1
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
@@ -409,7 +409,7 @@ configure: failed program was:
 | #define INCL_PURE_FLUIDS 1
 | #define WITH_SPECTRA 1
 | #define WITH_HTML_LOGS 1
-| #define PYTHON_EXE "usr/bin/python"
+| #define PYTHON_EXE "usr/bin/python2.6"
 | #define HAS_NUMPY 1
 | /* end confdefs.h.  */
 | #include <ac_nonexistent.h>
@@ -1037,7 +1037,7 @@ PACKAGE_VERSION='1.7.0'
 PATH_SEPARATOR=':'
 PIC='-fPIC'
 PURIFY=''
-PYTHON_CMD='usr/bin/python'
+PYTHON_CMD='usr/bin/python2.6'
 RANLIB='ranlib'
 RAW_LIBS_DEP=' libuser.a liboneD.a libzeroD.a libequil.a libkinetics.a libtransport.a libthermo.a libctnumerics.a libctmath.a libtpx.a libctspectra.a libconverters.a libctbase.a libctf2c.a'
 SHARED='-dynamic'
@@ -1151,7 +1151,7 @@ username='root'
 #define PACKAGE_STRING "Cantera 1.7.0"
 #define PACKAGE_TARNAME "cantera"
 #define PACKAGE_VERSION "1.7.0"
-#define PYTHON_EXE "usr/bin/python"
+#define PYTHON_EXE "usr/bin/python2.6"
 #define RXNPATH_FONT "Helvetica"
 #define SIZEOF_CHAR 1
 #define SIZEOF_DOUBLE 8

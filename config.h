@@ -101,7 +101,7 @@ typedef  int          ftnlen;       // Fortran hidden string length type
 // Cantera's setup. It identifies the python executable
 // used to run Python to process .cti files. Note that this is only
 // used if environment variable PYTHON_CMD is not set.
-#define PYTHON_EXE "usr/bin/python"
+#define PYTHON_EXE "usr/bin/python2.6"
 
 // If this is defined, the Cantera Python interface will use the
 // Numeric package

@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/equilibrium/simple_test
 
-PYTHON_CMD = usr/bin/python
+PYTHON_CMD = usr/bin/python2.6
 all:
 
 run:

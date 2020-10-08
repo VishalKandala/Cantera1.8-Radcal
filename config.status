@@ -726,7 +726,7 @@ s,@RAW_LIBS_DEP@, libuser.a liboneD.a libzeroD.a libequil.a libkinetics.a libtra
 s,@CANTERA_CORE_LIBS@, -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase,;t t
 s,@CANTERA_CORE_LIBS_DEP@, /usr/local/cantera/lib/libequil.a /usr/local/cantera/lib/libkinetics.a /usr/local/cantera/lib/libtransport.a /usr/local/cantera/lib/libthermo.a /usr/local/cantera/lib/libctnumerics.a /usr/local/cantera/lib/libctmath.a /usr/local/cantera/lib/libtpx.a /usr/local/cantera/lib/libctspectra.a /usr/local/cantera/lib/libconverters.a /usr/local/cantera/lib/libctbase.a,;t t
 s,@CT_SHARED_LIB@,clib,;t t
-s,@PYTHON_CMD@,usr/bin/python,;t t
+s,@PYTHON_CMD@,usr/bin/python2.6,;t t
 s,@BUILD_PYTHON@,2,;t t
 s,@NUMPY_INC_DIR@,,;t t
 s,@NUMPY_HOME@,,;t t
@@ -1116,7 +1116,7 @@ ${ac_dA}WITH_REACTIONPATHS${ac_dB}WITH_REACTIONPATHS${ac_dC}1${ac_dD}
 ${ac_dA}INCL_PURE_FLUIDS${ac_dB}INCL_PURE_FLUIDS${ac_dC}1${ac_dD}
 ${ac_dA}WITH_SPECTRA${ac_dB}WITH_SPECTRA${ac_dC}1${ac_dD}
 ${ac_dA}WITH_HTML_LOGS${ac_dB}WITH_HTML_LOGS${ac_dC}1${ac_dD}
-${ac_dA}PYTHON_EXE${ac_dB}PYTHON_EXE${ac_dC}"usr/bin/python"${ac_dD}
+${ac_dA}PYTHON_EXE${ac_dB}PYTHON_EXE${ac_dC}"usr/bin/python2.6"${ac_dD}
 ${ac_dA}HAS_NUMPY${ac_dB}HAS_NUMPY${ac_dC}1${ac_dD}
 ${ac_dA}STDC_HEADERS${ac_dB}STDC_HEADERS${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_SYS_TYPES_H${ac_dB}HAVE_SYS_TYPES_H${ac_dC}1${ac_dD}
@@ -1188,7 +1188,7 @@ ${ac_uA}WITH_REACTIONPATHS${ac_uB}WITH_REACTIONPATHS${ac_uC}1${ac_uD}
 ${ac_uA}INCL_PURE_FLUIDS${ac_uB}INCL_PURE_FLUIDS${ac_uC}1${ac_uD}
 ${ac_uA}WITH_SPECTRA${ac_uB}WITH_SPECTRA${ac_uC}1${ac_uD}
 ${ac_uA}WITH_HTML_LOGS${ac_uB}WITH_HTML_LOGS${ac_uC}1${ac_uD}
-${ac_uA}PYTHON_EXE${ac_uB}PYTHON_EXE${ac_uC}"usr/bin/python"${ac_uD}
+${ac_uA}PYTHON_EXE${ac_uB}PYTHON_EXE${ac_uC}"usr/bin/python2.6"${ac_uD}
 ${ac_uA}HAS_NUMPY${ac_uB}HAS_NUMPY${ac_uC}1${ac_uD}
 ${ac_uA}STDC_HEADERS${ac_uB}STDC_HEADERS${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_SYS_TYPES_H${ac_uB}HAVE_SYS_TYPES_H${ac_uC}1${ac_uD}

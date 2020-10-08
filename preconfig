@@ -86,7 +86,7 @@ USE_NUMERIC=${USE_NUMERIC:="n"}
 USE_NUMPY=${USE_NUMPY:="y"}
 
 if ["$USE_NUMPY" = "y"]; then
-	export NUMPY_INC_DIR= `python -c 'import numpy; print numpy.get_include()'`
+	export NUMPY_INC_DIR= `python2.6 -c 'import numpy; print numpy.get_include()'`
 fi 
 
 # If numpy was installed using the --home option, set this to the
@@ -317,7 +317,7 @@ USE_SUNDIALS=${USE_SUNDIALS:='default'}
 # This is where you installed sundials if you used the --prefix option
 # when you configured sundials. If you didn't use the prefix option,
 # then comment this line out.
-#SUNDIALS_HOME=${SUNDIALS_HOME:="/usr/local/bin/"}
+SUNDIALS_HOME=${SUNDIALS_HOME:="/usr/local/bin/"}
 
 
 # It is recommended that you install the newest release of sundials 
