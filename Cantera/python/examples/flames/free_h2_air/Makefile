@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/flames/free_h2_air
 
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 run:
 	$(PYTHON_CMD) free_h2_air.py 

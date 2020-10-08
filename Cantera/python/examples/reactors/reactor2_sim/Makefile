@@ -3,7 +3,7 @@
 INST_DIR=/usr/local/cantera/demos/python/reactors/reactor2_sim
 
 
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 all:
 	

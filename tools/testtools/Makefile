@@ -1,14 +1,14 @@
 #/bin/sh
 
-LIBDIR = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu
-INCDIR = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/include/cantera
-BINDIR = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/bin
-BBINDIR = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/bin/x86_64-unknown-linux-gnu
+LIBDIR = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu
+INCDIR = /Cantera1.8-Radcal/build/include/cantera
+BINDIR = /Cantera1.8-Radcal/bin
+BBINDIR = /Cantera1.8-Radcal/build/bin/x86_64-unknown-linux-gnu
 build_ck = 1
 
 PURIFY=
 
-LCXX_FLAGS = -L$(LIBDIR)   -L/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu -O3 -Wall  
+LCXX_FLAGS = -L$(LIBDIR)   -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib -O3 -Wall  
 LOCAL_LIBS = -lcantera -lckreader -lcvode -lctmath @LAPACK_LIBRARY@ @BLAS_LIBRARY@ -lctcxx
 
 LCXX_END_LIBS = -lctf2c -lm

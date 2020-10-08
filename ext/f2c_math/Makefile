@@ -14,10 +14,10 @@ do_ranlib = 1
 PURIFY=
 
 # the directory where the Cantera libraries are located
-CANTERA_LIBDIR=/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu
+CANTERA_LIBDIR=/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu
 
 # the directory where Cantera include files may be found.
-CANTERA_INCDIR=/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/include/cantera
+CANTERA_INCDIR=/Cantera1.8-Radcal/build/include/cantera
 
 # the C++ compiler
 CXX = g++
@@ -51,7 +51,7 @@ CXX_INCLUDES=-I../f2c_libs
 
 # -----------------------------------------------
 
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctmath.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctmath.a
 
 all: $(LIB)
 

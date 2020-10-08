@@ -8,7 +8,7 @@ ct = $(export_dir)/cantera-$(version)
 build_ck = 1
 build_clib = 1
 build_python = 2
-build_f90 = 1
+build_f90 = 0
 build_matlab = 0
 os_is_win = 0
 incl_user_code = 1
@@ -45,8 +45,8 @@ demos: example_codes
 
 # build the Cantera static libraries
 kernel:  
-	/usr/bin/install -c -d /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu
-	/usr/bin/install -c -d /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/bin/x86_64-unknown-linux-gnu
+	/usr/bin/install -c -d /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu
+	/usr/bin/install -c -d /Cantera1.8-Radcal/build/bin/x86_64-unknown-linux-gnu
 	cd ext; make
 	cd Cantera/src; make
 
@@ -78,7 +78,7 @@ utils:
 kernel-install:
 	/usr/bin/install -c -d /usr/local/cantera/lib
 	-rm -fR /usr/local/cantera/lib/*
-	( for ilib in /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/*.a ; do  \
+	( for ilib in /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/*.a ; do  \
 	  /usr/bin/install -c -c -m 644 $${ilib} /usr/local/cantera/lib ; \
           done )
 ifeq ($(do_ranlib),1)
@@ -93,12 +93,12 @@ endif
 win-kernel-install:
 	/usr/bin/install -c -d /usr/local/cantera/lib
 	-$(RMDIRTREE) /usr/local/cantera/lib/*
-	( for ilib in /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/*.lib ; do  \
+	( for ilib in /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/*.lib ; do  \
           /usr/bin/install -c -c -m 644 $${ilib} /usr/local/cantera/lib ;  done )
 ifeq ($(use_dll),1)
-	( for ilib in /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/*.dll ; do  \
+	( for ilib in /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/*.dll ; do  \
           /usr/bin/install -c -c -m 644 $${ilib} /usr/local/cantera/lib ;  done )
-	( for ilib in /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/*.exp ; do  \
+	( for ilib in /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/*.exp ; do  \
           /usr/bin/install -c -c -m 644 $${ilib} /usr/local/cantera/lib ;  done )
 endif
 
@@ -153,7 +153,7 @@ ifeq ($(build_python),2)
             /usr/bin/install -c -c $${ihhh} /usr/local/cantera/tutorials/python ; \
             echo "/usr/bin/install -c -c $${ihhh} /usr/local/cantera/tutorials/python" ; \
           done )
-	chown -R wenjiang /usr/local/cantera/tutorials/python
+	chown -R root /usr/local/cantera/tutorials/python
 else
 	@echo 'NOT installing Python demos or tutorials'
 endif
@@ -183,10 +183,10 @@ demo-install:
 	/usr/bin/install -c -c -m ug+rw,o+r tools/templates/f77/demo_ftnlib.cpp /usr/local/cantera/demos/f77
 	( for ihhh in Cantera/fortran/f77demos/*.txt ; do  \
           /usr/bin/install -c -c -m ug+rw,o+r $${ihhh} /usr/local/cantera/demos/f77 ;  done )
-	chown -R wenjiang /usr/local/cantera/demos/f77
+	chown -R root /usr/local/cantera/demos/f77
 ifeq ($(build_python),2)
 	(cd Cantera/python/examples; make install)
-	chown -R wenjiang /usr/local/cantera/demos/python
+	chown -R root /usr/local/cantera/demos/python
 endif
 
 finish-install:
@@ -198,8 +198,8 @@ ifeq ($(os_is_win),0)
 	cp -f License.txt "/usr/local/cantera/bin"
 ifneq ($(build_python),0)
 	/usr/bin/install -c -c tools/src/finish_install.py tools/bin
-	(PYTHONPATH=''; /usr/bin/python2 tools/bin/finish_install.py /usr/local/cantera /usr/bin/python2)
-	cp -f "/home/wenjiang/setup_cantera" "/usr/local/cantera/bin"
+	(PYTHONPATH=''; usr/bin/python tools/bin/finish_install.py /usr/local/cantera usr/bin/python)
+	cp -f "/root/setup_cantera" "/usr/local/cantera/bin"
 	chmod +x /usr/local/cantera/bin/setup_cantera
 	chmod +x /usr/local/cantera/bin/ctnew
 	chmod +x /usr/local/cantera/bin/mixmaster
@@ -209,7 +209,7 @@ else
 	cd Cantera/fortran/f77demos; sed s'/isentropic/ctlib/g' isentropic.dsp > ctlib.dsp
 	( for ihhh in Cantera/fortran/f77demos/*.dsp ; do  \
           /usr/bin/install -c -c $${ihhh} /usr/local/cantera/demos/f77 ;  done )
-	( for ihhh in  /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/bin/x86_64-unknown-linux-gnu/* ; do  \
+	( for ihhh in  /Cantera1.8-Radcal/build/bin/x86_64-unknown-linux-gnu/* ; do  \
           /usr/bin/install -c -c $${ihhh} /usr/local/cantera/bin ;  done )
 endif
 
@@ -242,7 +242,7 @@ uninstall:
 	cd tools; make uninstall
 
 clean:
-	-$(RMDIRTREE) *.*~ /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/*.* build/include/cantera/config.h svn*~
+	-$(RMDIRTREE) *.*~ /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/*.* build/include/cantera/config.h svn*~
 	-cd Cantera; make clean
 	-cd tools; make clean
 	-cd ext; make clean

@@ -43,7 +43,7 @@ bllibstr = "-lctlapack -lctblas"
 bllibs = bllibstr.replace('-l',' ')
 bllist = bllibs.split()
 
-cvlibstr = "-lcvode"
+cvlibstr = "-lsundials_cvodes -lsundials_nvecserial"
 cvlibs = cvlibstr.replace('-l',' ')
 cvlist = cvlibs.split()
 
@@ -55,10 +55,10 @@ if need_cathermo == 1:
 extra_link = linkargs + " " + ""
 linkargs = extra_link.split()    
 
-bldirstr = " -L/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu"
+bldirstr = " -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib"
 bldirs = bldirstr.replace('-L',' ')
 dirlist = bldirs.split()
-libdir = ['/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu']
+libdir = ['/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu']
 for d in dirlist:
     libdir.append(d)
 
@@ -66,7 +66,7 @@ endlibstr1 = "-lctf2c -lm"
 endlib1 = endlibstr1.replace('-l', ' ')
 endlib = endlib1.split()
 
-locallibstr = " -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lcvode -lctlapack -lctblas -lctf2c"
+locallibstr = " -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c"
 local1 = locallibstr.replace('-l', ' ')
 locallibs = local1.split()
 

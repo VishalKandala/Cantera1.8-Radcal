@@ -1,6 +1,6 @@
 import sys, os, string
 prefix = '/usr/local/cantera' 
-pycmd = '/usr/bin/python2' # sys.argv[2]
+pycmd = 'usr/bin/python' # sys.argv[2]
 localinst = 0
 
 build_python = 2
@@ -13,7 +13,7 @@ demodir = '/usr/local/cantera/demos'
 datadir = '/usr/local/cantera/data'
 templdir = '/usr/local/cantera/templates'
 ctdir = '/usr/local/cantera'
-home = '/home/wenjiang'
+home = '/root'
 isdarwin = '0'
 numarray_home = ''
 

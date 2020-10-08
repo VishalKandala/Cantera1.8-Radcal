@@ -9,7 +9,7 @@
 #
 ###############################################################
 
-build_f90=1
+build_f90=0
 build_python=2
 
 INCDIR =      ../../build/include/cantera

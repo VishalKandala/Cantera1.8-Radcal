@@ -26,7 +26,7 @@ CXX_FLAGS = -O3 -Wall   $(CXX_OPT) $(PIC_FLAG)
 
 CXX_INCLUDES = -I../src/base
 
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libuser.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libuser.a
 
 DEPENDS = $(OBJS:.o=.d)
 

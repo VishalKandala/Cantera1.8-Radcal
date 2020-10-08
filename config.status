@@ -638,7 +638,7 @@ s,@local_python_inst@,0,;t t
 s,@python_prefix@,/usr/local/cantera,;t t
 s,@python_win_prefix@,/usr/local/cantera,;t t
 s,@ctversion@,1.8.0,;t t
-s,@homedir@,/home/wenjiang,;t t
+s,@homedir@,/root,;t t
 s,@ct_libdir@,/usr/local/cantera/lib,;t t
 s,@ct_bindir@,/usr/local/cantera/bin,;t t
 s,@ct_incdir@,/usr/local/cantera/include/cantera,;t t
@@ -662,11 +662,11 @@ s,@target@,x86_64-unknown-linux-gnu,;t t
 s,@target_cpu@,x86_64,;t t
 s,@target_vendor@,unknown,;t t
 s,@target_os@,linux-gnu,;t t
-s,@username@,wenjiang,;t t
-s,@ctroot@,/home/wenjiang/Downloads/cantera-1.8-Duffour-test,;t t
-s,@buildinc@,/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/include,;t t
-s,@buildlib@,/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu,;t t
-s,@buildbin@,/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/bin/x86_64-unknown-linux-gnu,;t t
+s,@username@,root,;t t
+s,@ctroot@,/Cantera1.8-Radcal,;t t
+s,@buildinc@,/Cantera1.8-Radcal/build/include,;t t
+s,@buildlib@,/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu,;t t
+s,@buildbin@,/Cantera1.8-Radcal/build/bin/x86_64-unknown-linux-gnu,;t t
 s,@MAKE@,make,;t t
 s,@GRAPHVIZDIR@, ,;t t
 s,@ARCHIVE@,ar ruv,;t t
@@ -682,14 +682,14 @@ s,@CPPFLAGS@,,;t t
 s,@ac_ct_CXX@,,;t t
 s,@EXEEXT@,,;t t
 s,@OBJEXT@,o,;t t
-s,@use_sundials@,0,;t t
-s,@CVODE_LIBS@,-lcvode,;t t
-s,@IDA_LIBS@,,;t t
-s,@sundials_include@,,;t t
-s,@sundials_lib_dir@,,;t t
-s,@sundials_lib@,,;t t
-s,@sundials_lib_dep@,,;t t
-s,@CANTERA_DEBUG_MODE@,0,;t t
+s,@use_sundials@,1,;t t
+s,@CVODE_LIBS@,-lsundials_cvodes -lsundials_nvecserial,;t t
+s,@IDA_LIBS@,-lsundials_ida -lsundials_nvecserial,;t t
+s,@sundials_include@,-I/usr/local/include,;t t
+s,@sundials_lib_dir@,/usr/local/lib,;t t
+s,@sundials_lib@,-L/usr/local/lib -lsundials_cvodes -lsundials_ida -lsundials_nvecserial,;t t
+s,@sundials_lib_dep@,/usr/local/lib/libsundials_cvodes.a /usr/local/lib/libsundials_ida.a /usr/local/lib/libsundials_nvecserial.a,;t t
+s,@CANTERA_DEBUG_MODE@,1,;t t
 s,@COMPILE_PURE_FLUIDS@,1,;t t
 s,@phase_object_files@, SemiconductorPhase.o StoichSubstance.o PureFluidPhase.o LatticeSolidPhase.o LatticePhase.o,;t t
 s,@phase_header_files@, MetalPhase.h SemiconductorPhase.h AdsorbateThermo.h StoichSubstance.h PureFluidPhase.h LatticeSolidPhase.h LatticePhase.h,;t t
@@ -712,21 +712,21 @@ s,@PURIFY@,,;t t
 s,@build_lapack@,1,;t t
 s,@build_blas@,1,;t t
 s,@BLAS_LAPACK_LIBS@,-lctlapack -lctblas,;t t
-s,@BLAS_LAPACK_LINK@,-L/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu -lctlapack -lctblas,;t t
-s,@BLAS_LAPACK_DIR@,/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu,;t t
+s,@BLAS_LAPACK_LINK@,-L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -lctlapack -lctblas,;t t
+s,@BLAS_LAPACK_DIR@,/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu,;t t
 s,@build_with_f2c@,1,;t t
 s,@build_f2c_lib@,1,;t t
 s,@F2C_SYSTEMLIB@,,;t t
 s,@BOOST_LIB_DIR@,,;t t
-s,@LOCAL_LIB_DIRS@, -L/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu,;t t
-s,@LOCAL_LIBS@, -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lcvode -lctlapack -lctblas -lctf2c,;t t
-s,@LOCAL_LIBS_DEP@, /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libuser.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/liboneD.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libzeroD.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libequil.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libkinetics.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libtransport.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libthermo.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctnumerics.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctmath.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libtpx.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctspectra.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libconverters.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctbase.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctf2c.a,;t t
+s,@LOCAL_LIB_DIRS@, -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib,;t t
+s,@LOCAL_LIBS@, -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c,;t t
+s,@LOCAL_LIBS_DEP@, /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libuser.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/liboneD.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libzeroD.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libequil.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libkinetics.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libtransport.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libthermo.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctnumerics.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctmath.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libtpx.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctspectra.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libconverters.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctbase.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctf2c.a,;t t
 s,@INSTALL_LIBS_DEP@, /usr/local/cantera/lib/libequil.a /usr/local/cantera/lib/libkinetics.a /usr/local/cantera/lib/libtransport.a /usr/local/cantera/lib/libthermo.a /usr/local/cantera/lib/libctnumerics.a /usr/local/cantera/lib/libctmath.a /usr/local/cantera/lib/libtpx.a /usr/local/cantera/lib/libctspectra.a /usr/local/cantera/lib/libconverters.a /usr/local/cantera/lib/libctbase.a /usr/local/cantera/lib/libctf2c.a,;t t
 s,@RAW_LIBS_DEP@, libuser.a liboneD.a libzeroD.a libequil.a libkinetics.a libtransport.a libthermo.a libctnumerics.a libctmath.a libtpx.a libctspectra.a libconverters.a libctbase.a libctf2c.a,;t t
 s,@CANTERA_CORE_LIBS@, -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase,;t t
 s,@CANTERA_CORE_LIBS_DEP@, /usr/local/cantera/lib/libequil.a /usr/local/cantera/lib/libkinetics.a /usr/local/cantera/lib/libtransport.a /usr/local/cantera/lib/libthermo.a /usr/local/cantera/lib/libctnumerics.a /usr/local/cantera/lib/libctmath.a /usr/local/cantera/lib/libtpx.a /usr/local/cantera/lib/libctspectra.a /usr/local/cantera/lib/libconverters.a /usr/local/cantera/lib/libctbase.a,;t t
 s,@CT_SHARED_LIB@,clib,;t t
-s,@PYTHON_CMD@,/usr/bin/python2,;t t
+s,@PYTHON_CMD@,usr/bin/python,;t t
 s,@BUILD_PYTHON@,2,;t t
 s,@NUMPY_INC_DIR@,,;t t
 s,@NUMPY_HOME@,,;t t
@@ -734,7 +734,7 @@ s,@NUMARRAY_INC_DIR@,,;t t
 s,@NUMARRAY_HOME@,,;t t
 s,@CANTERA_PYTHON_HOME@,,;t t
 s,@CVSTAG@,HEAD,;t t
-s,@MATLAB_CMD@,,;t t
+s,@MATLAB_CMD@,default,;t t
 s,@BUILD_MATLAB@,0,;t t
 s,@BUILD_CLIB@,1,;t t
 s,@export_name@,x86_64-unknown-linux-gnu,;t t
@@ -758,10 +758,10 @@ s,@FFLAGS@,-O3   -fno-second-underscore,;t t
 s,@ac_ct_F77@,,;t t
 s,@FLIBS@,,;t t
 s,@F90@,gfortran,;t t
-s,@BUILD_F90@,1,;t t
-s,@F90FLAGS@,-fno-second-underscore -I. -I/usr/local/cantera/include/cantera -O3,;t t
-s,@F90BUILDFLAGS@,-fno-second-underscore -I. -O3,;t t
-s,@F90LIBS@,-lgfortran,;t t
+s,@BUILD_F90@,0,;t t
+s,@F90FLAGS@, -O3,;t t
+s,@F90BUILDFLAGS@, -O3,;t t
+s,@F90LIBS@,,;t t
 s,@LCXX_FLIBS@,,;t t
 s,@precompile_headers@,no,;t t
 s,@OS_IS_DARWIN@,0,;t t
@@ -777,7 +777,7 @@ s,@math_libs@,-lcvode -lctmath,;t t
 s,@SO@,.so,;t t
 s,@LDSHARED@,,;t t
 s,@EXTRA_LINK@,,;t t
-s,@TSCOMPARE_abs@,/home/wenjiang/Downloads/cantera-1.8-Duffour-test/bin/tscompare,;t t
+s,@TSCOMPARE_abs@,/Cantera1.8-Radcal/bin/tscompare,;t t
 s,@INSTALL_abs@,/usr/bin/install -c,;t t
 s,@INSTALL_VERBOSE@,-v,;t t
 s,@LIBOBJS@,,;t t
@@ -1099,6 +1099,9 @@ ${ac_dA}NDEBUG${ac_dB}NDEBUG${ac_dC}1${ac_dD}
 ${ac_dA}CANTERA_VERSION${ac_dB}CANTERA_VERSION${ac_dC}"1.8.0"${ac_dD}
 ${ac_dA}RXNPATH_FONT${ac_dB}RXNPATH_FONT${ac_dC}"Helvetica"${ac_dD}
 ${ac_dA}CANTERA_DATA${ac_dB}CANTERA_DATA${ac_dC}"/usr/local/cantera/data"${ac_dD}
+${ac_dA}HAS_SUNDIALS${ac_dB}HAS_SUNDIALS${ac_dC}1${ac_dD}
+${ac_dA}SUNDIALS_VERSION_23${ac_dB}SUNDIALS_VERSION_23${ac_dC}1${ac_dD}
+${ac_dA}DEBUG_MODE${ac_dB}DEBUG_MODE${ac_dC}1${ac_dD}
 ${ac_dA}WITH_METAL${ac_dB}WITH_METAL${ac_dC}1${ac_dD}
 ${ac_dA}WITH_SEMICONDUCTOR${ac_dB}WITH_SEMICONDUCTOR${ac_dC}1${ac_dD}
 ${ac_dA}WITH_ADSORBATE${ac_dB}WITH_ADSORBATE${ac_dC}1${ac_dD}
@@ -1113,7 +1116,7 @@ ${ac_dA}WITH_REACTIONPATHS${ac_dB}WITH_REACTIONPATHS${ac_dC}1${ac_dD}
 ${ac_dA}INCL_PURE_FLUIDS${ac_dB}INCL_PURE_FLUIDS${ac_dC}1${ac_dD}
 ${ac_dA}WITH_SPECTRA${ac_dB}WITH_SPECTRA${ac_dC}1${ac_dD}
 ${ac_dA}WITH_HTML_LOGS${ac_dB}WITH_HTML_LOGS${ac_dC}1${ac_dD}
-${ac_dA}PYTHON_EXE${ac_dB}PYTHON_EXE${ac_dC}"/usr/bin/python2"${ac_dD}
+${ac_dA}PYTHON_EXE${ac_dB}PYTHON_EXE${ac_dC}"usr/bin/python"${ac_dD}
 ${ac_dA}HAS_NUMPY${ac_dB}HAS_NUMPY${ac_dC}1${ac_dD}
 ${ac_dA}STDC_HEADERS${ac_dB}STDC_HEADERS${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_SYS_TYPES_H${ac_dB}HAVE_SYS_TYPES_H${ac_dC}1${ac_dD}
@@ -1125,9 +1128,6 @@ ${ac_dA}HAVE_STRINGS_H${ac_dB}HAVE_STRINGS_H${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_INTTYPES_H${ac_dB}HAVE_INTTYPES_H${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_STDINT_H${ac_dB}HAVE_STDINT_H${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_UNISTD_H${ac_dB}HAVE_UNISTD_H${ac_dC}1${ac_dD}
-${ac_dA}SIZEOF_INT${ac_dB}SIZEOF_INT${ac_dC}4${ac_dD}
-${ac_dA}SIZEOF_LONG${ac_dB}SIZEOF_LONG${ac_dC}8${ac_dD}
-${ac_dA}SIZEOF_VOID_P${ac_dB}SIZEOF_VOID_P${ac_dC}8${ac_dD}
 CEOF
   sed -f $tmp/defines.sed $tmp/in >$tmp/out
   rm -f $tmp/in
@@ -1137,6 +1137,9 @@ CEOF
 /^[	 ]*#[	 ]*define/!b
 t clr
 : clr
+${ac_dA}SIZEOF_INT${ac_dB}SIZEOF_INT${ac_dC}4${ac_dD}
+${ac_dA}SIZEOF_LONG${ac_dB}SIZEOF_LONG${ac_dC}8${ac_dD}
+${ac_dA}SIZEOF_VOID_P${ac_dB}SIZEOF_VOID_P${ac_dC}8${ac_dD}
 ${ac_dA}SIZEOF_CHAR${ac_dB}SIZEOF_CHAR${ac_dC}1${ac_dD}
 ${ac_dA}SIZEOF_SHORT${ac_dB}SIZEOF_SHORT${ac_dC}2${ac_dD}
 ${ac_dA}SIZEOF_FLOAT${ac_dB}SIZEOF_FLOAT${ac_dC}4${ac_dD}
@@ -1168,6 +1171,9 @@ ${ac_uA}NDEBUG${ac_uB}NDEBUG${ac_uC}1${ac_uD}
 ${ac_uA}CANTERA_VERSION${ac_uB}CANTERA_VERSION${ac_uC}"1.8.0"${ac_uD}
 ${ac_uA}RXNPATH_FONT${ac_uB}RXNPATH_FONT${ac_uC}"Helvetica"${ac_uD}
 ${ac_uA}CANTERA_DATA${ac_uB}CANTERA_DATA${ac_uC}"/usr/local/cantera/data"${ac_uD}
+${ac_uA}HAS_SUNDIALS${ac_uB}HAS_SUNDIALS${ac_uC}1${ac_uD}
+${ac_uA}SUNDIALS_VERSION_23${ac_uB}SUNDIALS_VERSION_23${ac_uC}1${ac_uD}
+${ac_uA}DEBUG_MODE${ac_uB}DEBUG_MODE${ac_uC}1${ac_uD}
 ${ac_uA}WITH_METAL${ac_uB}WITH_METAL${ac_uC}1${ac_uD}
 ${ac_uA}WITH_SEMICONDUCTOR${ac_uB}WITH_SEMICONDUCTOR${ac_uC}1${ac_uD}
 ${ac_uA}WITH_ADSORBATE${ac_uB}WITH_ADSORBATE${ac_uC}1${ac_uD}
@@ -1182,7 +1188,7 @@ ${ac_uA}WITH_REACTIONPATHS${ac_uB}WITH_REACTIONPATHS${ac_uC}1${ac_uD}
 ${ac_uA}INCL_PURE_FLUIDS${ac_uB}INCL_PURE_FLUIDS${ac_uC}1${ac_uD}
 ${ac_uA}WITH_SPECTRA${ac_uB}WITH_SPECTRA${ac_uC}1${ac_uD}
 ${ac_uA}WITH_HTML_LOGS${ac_uB}WITH_HTML_LOGS${ac_uC}1${ac_uD}
-${ac_uA}PYTHON_EXE${ac_uB}PYTHON_EXE${ac_uC}"/usr/bin/python2"${ac_uD}
+${ac_uA}PYTHON_EXE${ac_uB}PYTHON_EXE${ac_uC}"usr/bin/python"${ac_uD}
 ${ac_uA}HAS_NUMPY${ac_uB}HAS_NUMPY${ac_uC}1${ac_uD}
 ${ac_uA}STDC_HEADERS${ac_uB}STDC_HEADERS${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_SYS_TYPES_H${ac_uB}HAVE_SYS_TYPES_H${ac_uC}1${ac_uD}
@@ -1194,9 +1200,6 @@ ${ac_uA}HAVE_STRINGS_H${ac_uB}HAVE_STRINGS_H${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_INTTYPES_H${ac_uB}HAVE_INTTYPES_H${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_STDINT_H${ac_uB}HAVE_STDINT_H${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_UNISTD_H${ac_uB}HAVE_UNISTD_H${ac_uC}1${ac_uD}
-${ac_uA}SIZEOF_INT${ac_uB}SIZEOF_INT${ac_uC}4${ac_uD}
-${ac_uA}SIZEOF_LONG${ac_uB}SIZEOF_LONG${ac_uC}8${ac_uD}
-${ac_uA}SIZEOF_VOID_P${ac_uB}SIZEOF_VOID_P${ac_uC}8${ac_uD}
 CEOF
   sed -f $tmp/undefs.sed $tmp/in >$tmp/out
   rm -f $tmp/in
@@ -1206,6 +1209,9 @@ CEOF
 /^[	 ]*#[	 ]*undef/!b
 t clr
 : clr
+${ac_uA}SIZEOF_INT${ac_uB}SIZEOF_INT${ac_uC}4${ac_uD}
+${ac_uA}SIZEOF_LONG${ac_uB}SIZEOF_LONG${ac_uC}8${ac_uD}
+${ac_uA}SIZEOF_VOID_P${ac_uB}SIZEOF_VOID_P${ac_uC}8${ac_uD}
 ${ac_uA}SIZEOF_CHAR${ac_uB}SIZEOF_CHAR${ac_uC}1${ac_uD}
 ${ac_uA}SIZEOF_SHORT${ac_uB}SIZEOF_SHORT${ac_uC}2${ac_uD}
 ${ac_uA}SIZEOF_FLOAT${ac_uB}SIZEOF_FLOAT${ac_uC}4${ac_uD}

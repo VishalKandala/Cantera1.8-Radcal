@@ -23,7 +23,7 @@ LINK_OPTIONS =
 
 #############################################################################
 
-on_DEBUG_MODE=0
+on_DEBUG_MODE=1
 
 # Check to see whether we are in the msvc++ environment
 os_is_win = 0
@@ -40,7 +40,7 @@ CXX = g++
 #
 # The directory where Cantera include files may be found.
 #
-CANTERA_INCDIR=/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/include/cantera
+CANTERA_INCDIR=/Cantera1.8-Radcal/build/include/cantera
 
 INCLUDE_DIRS = -I$(CANTERA_INCDIR) 
 
@@ -51,11 +51,11 @@ CXX_FLAGS = -O3 -Wall   $(INCLUDE_DIRS)
 LCXX_END_LIBS = -lctf2c -lm
 
 # the directory where the Cantera libraries are located
-CANTERA_LIBDIR=/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu
+CANTERA_LIBDIR=/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu
 #
 # Setup The Cantera Interface
 #
-CANTERA_LIBS=  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lcvode -lctlapack -lctblas -lctf2c -lctcxx
+CANTERA_LIBS=  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c -lctcxx
 
 CANTERA_LIBDEP = \
      $(CANTERA_LIBDIR)/libequil.a \
@@ -74,7 +74,7 @@ CANTERA_LIBDEP = \
 
 
 # flags passed to the C++ compiler/linker for the linking step
-LCXX_FLAGS = -O3 -Wall    -L/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu 
+LCXX_FLAGS = -O3 -Wall    -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib 
 
 # How to compile C++ source files to object files
 .cpp.o:

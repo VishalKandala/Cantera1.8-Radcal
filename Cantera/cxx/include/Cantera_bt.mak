@@ -73,19 +73,19 @@ endif
 #####################################################################
 #         CVODE/SUNDIALS LINKAGE
 ####################################################################
-CANTERA_use_sundials = 0
+CANTERA_use_sundials = 1
 
 #
 # Includes for Sundials - none for cvode
 #
-CANTERA_CVODE_INCLUDE=
+CANTERA_CVODE_INCLUDE=-I/usr/local/include
 #
 # Link line for cvode and sundials
 #
 ifeq ($(CANTERA_user_sundials), 1)
 
 else
-CANTERA_CVODE_LIBS= -L$(CANTERA_LIBSDIR) -lcvode
+CANTERA_CVODE_LIBS= -L$(CANTERA_LIBSDIR) -lsundials_cvodes -lsundials_nvecserial
 endif
 
 
@@ -95,7 +95,7 @@ endif
 CANTERA_build_lapack= 1
 CANTERA_build_blas= 1
 
-CANTERA_BLAS_LAPACK_DIR= /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu
+CANTERA_BLAS_LAPACK_DIR= /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu
 
 CANTERA_BLAS_LAPACK_LIBS = -L$(CANTERA_BLAS_LAPACK_DIR) -lctlapack -lctblas
 
@@ -118,7 +118,7 @@ endif
 
 CANTERA_TOTAL_INCLUDES= $(CANTERA_CORE_INCLUDES) $(CANTERA_BOOST_INCLUDES) $(CANTERA_CVODE_INCLUDE)
 
-CANTERA_TOTAL_LIBS2 =  -L/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lcvode -lctlapack -lctblas -lctf2c
+CANTERA_TOTAL_LIBS2 =  -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c
 
 CANTERA_TOTAL_LIBS= $(CANTERA_CORE_LIBS) $(CANTERA_BOOST_LIBS) \
                     $(CANTERA_CVODE_LIBS) $(CANTERA_BLAS_LAPACK_LIBS) \

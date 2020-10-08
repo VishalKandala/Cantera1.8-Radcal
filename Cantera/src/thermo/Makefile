@@ -17,7 +17,7 @@ do_ranlib = 1
 do_electro = 1
 do_issp    = 1
 
-debug_mode = 0
+debug_mode = 1
 ifeq ($(debug_mode), 1)
    DEBUG_FLAG=-DDEBUG_MODE
 else
@@ -90,7 +90,7 @@ CATHERMO_H   = $(THERMO_H) $(ELECTRO_H) $(ISSP_H)
 
 
 CXX_INCLUDES = -I../base 
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libthermo.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libthermo.a
 
 DEPENDS = $(CATHERMO_OBJ:.o=.d)
 

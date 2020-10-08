@@ -33,7 +33,7 @@ CXX = g++
 CXX_FLAGS = -O3 -Wall   
 
 # external libraries
-EXT_LIBS =  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lcvode -lctlapack -lctblas -lctf2c -lctcxx
+EXT_LIBS =  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c -lctcxx
 
 # Ending C++ linking libraries
 LCXX_END_LIBS = -lctf2c -lm
@@ -45,7 +45,7 @@ CANTERA_LIBDIR=/usr/local/cantera/lib
 CANTERA_INCDIR=/usr/local/cantera/include
 
 # flags passed to the C++ compiler/linker for the linking step
-LCXXFLAGS = -L$(CANTERA_LIBDIR)  -L/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu -O3 -Wall  
+LCXXFLAGS = -L$(CANTERA_LIBDIR)  -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib -O3 -Wall  
 
 # how to compile C++ source files to object files
 .cpp.o:

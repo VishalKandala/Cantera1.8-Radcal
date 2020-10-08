@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/reactors/sensitivity_sim
 
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 run:
 	$(PYTHON_CMD) sensitivity1.py

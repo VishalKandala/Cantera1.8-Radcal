@@ -3,7 +3,7 @@
 INST_DIR=/usr/local/cantera/demos/python/liquid_vapor/rankine
 
 
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 run:
 	$(PYTHON_CMD) rankine.py

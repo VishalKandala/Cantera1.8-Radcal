@@ -19,7 +19,7 @@ do_kinetics = 1
 do_heterokin    = 1
 do_rxnpath = 1
 
-debug_mode = 0
+debug_mode = 1
 ifeq ($(debug_mode), 1)
    DEBUG_FLAG=-DDEBUG_MODE
 else
@@ -69,7 +69,7 @@ ALLKINETICS_H   = $(KINETICS_H) $(HETEROKIN_H) $(RPATH_H)
 
 
 CXX_INCLUDES = -I../base -I../thermo -I../numerics 
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libkinetics.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libkinetics.a
 
 DEPENDS = $(ALLKINETICS_OBJ:.o=.d)
 

@@ -32,7 +32,7 @@ CFLAGS =   $(CXX_OPT) $(PIC_FLAG)
 # Destination f2c lib located in Cantera's build directory
 # -> Calling it ctf2c
 BUILDINCDIR=../../build/include/cantera
-F2C_LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctf2c.a
+F2C_LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctf2c.a
 F2C_H   = $(BUILDINCDIR)/f2c.h
 
 # compile, then strip unnecessary symbols

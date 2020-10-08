@@ -4,7 +4,7 @@ INST_DIR=/usr/local/cantera/demos/python/flames
 
 PY_DEMOS = flame1 flame2 stflame1 npflame1 free_h2_air \
 	   adiabatic_flame flame_fixed_T
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 all:
 	@(for py in $(PY_DEMOS) ; do \

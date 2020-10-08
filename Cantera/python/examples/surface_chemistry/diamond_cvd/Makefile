@@ -3,7 +3,7 @@
 INST_DIR=/usr/local/cantera/demos/python/surface_chemistry/diamond_cvd
 
 
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 all:
 

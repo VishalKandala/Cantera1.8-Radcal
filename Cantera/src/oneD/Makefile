@@ -29,7 +29,7 @@ ONED_H  = Inlet1D.h   MultiJac.h  Sim1D.h         StFlow.h \
           Surf1D.h    Domain1D.h  MultiNewton.h   OneDim.h \
           Resid1D.h   Solid1D.h   refine.h
 
-ONED_LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/liboneD.a
+ONED_LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/liboneD.a
 
 DEPENDS = $(OBJS:.o=.d)
 

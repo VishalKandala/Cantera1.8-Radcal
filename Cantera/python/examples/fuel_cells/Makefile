@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/fuel_cells
 
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 run:
 	$(PYTHON_CMD) sofc.py

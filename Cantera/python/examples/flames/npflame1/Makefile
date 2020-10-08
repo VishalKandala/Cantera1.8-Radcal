@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/flames/npflame1
 
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 run:
 	$(PYTHON_CMD) npflame1.py

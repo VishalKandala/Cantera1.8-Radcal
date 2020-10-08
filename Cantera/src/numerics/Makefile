@@ -15,16 +15,16 @@ INCDIR = ../../../build/include/cantera/kernel
 INSTALL_TSC = ../../../bin/install_tsc
 do_ranlib = 1
 
-debug_mode = 0
+debug_mode = 1
 ifeq ($(debug_mode), 1)
    DEBUG_FLAG=-DDEBUG_MODE
 else
    DEBUG_FLAG=
 endif
 
-use_sundials=0
+use_sundials=1
 
-SUNDIALS_INC=
+SUNDIALS_INC=-I/usr/local/include
 
 PURIFY= 
 
@@ -56,7 +56,7 @@ TOTAL_OBJ = $(NUMERICS_OBJ) $(ODEPACKAGE_OBJ)
 TTOTAL_H  = $(NUMERICS_H) CVode.h CVodesIntegrator.h
 
 CXX_INCLUDES = -I../base  $(SUNDIALS_INC)
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctnumerics.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctnumerics.a
 
 DEPENDS = $(TOTAL_OBJ:.o=.d)
 

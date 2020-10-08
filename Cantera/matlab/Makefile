@@ -9,7 +9,7 @@
 #
 ###############################################################
 
-LIBS =  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lcvode -lctlapack -lctblas -lctf2c  
+LIBS =  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c  
 SRCS = cantera/private/ctmethods.cpp \
        cantera/private/ctfunctions.cpp \
        cantera/private/xmlmethods.cpp \
@@ -27,7 +27,7 @@ SRCS = cantera/private/ctmethods.cpp \
        cantera/private/funcmethods.cpp 
 
 
-CANTERA_LIBDIR=/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu
+CANTERA_LIBDIR=/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu
 os_is_win=0
 
 ifeq ($(os_is_win),0)
@@ -51,11 +51,11 @@ all: cantera/ctmethods.mexglx
 
 cantera/ctmethods.mexglx: $(SRCS) $(LIBDEPS) Makefile
 ifeq ($(os_is_win),0)
-	/usr/bin/python2 setup_matlab.py /usr/local/cantera/bin /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu clib '$(LIBS)'
+	usr/bin/python setup_matlab.py /usr/local/cantera/bin /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu clib '$(LIBS)'
 else
-	/usr/bin/python2 setup_winmatlab.py
+	usr/bin/python setup_winmatlab.py
 endif
-	( -nojvm -nosplash -r setup)
+	(default -nojvm -nosplash -r setup)
 	rm -f setup.m 
 
 install:
@@ -176,8 +176,8 @@ install:
 	/usr/bin/install -c -d /usr/local/cantera/tutorials/matlab
 	( for iddd in cantera/tutorial/*.m ; do  \
           /usr/bin/install -c -c $${iddd} /usr/local/cantera/tutorials/matlab;  done )
-	chown -R wenjiang /usr/local/cantera/demos/matlab
-	chown -R wenjiang /usr/local/cantera/tutorials/matlab
+	chown -R root /usr/local/cantera/demos/matlab
+	chown -R root /usr/local/cantera/tutorials/matlab
 
 clean:
 	rm -f cantera/private/*.o

@@ -23,7 +23,7 @@ PURIFY=
 
 PIC_FLAG=-fPIC
 
-debug_mode = 0
+debug_mode = 1
 ifeq ($(debug_mode), 1)
    DEBUG_FLAG=-DDEBUG_MODE
 else
@@ -58,7 +58,7 @@ CATRAN_OBJ = $(TRAN_OBJ) $(ELECTRO_OBJ) $(ISSP_OBJ)
 CATRAN_H   = $(TRAN_H) $(ELECTRO_H) $(ISSP_H)
 
 CXX_INCLUDES = -I../base -I../thermo -I../numerics 
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libtransport.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libtransport.a
 
 DEPENDS = $(CATRAN_OBJ:.o=.d)
 

@@ -33,7 +33,7 @@ CXX = g++
 CXX_FLAGS = -O3 -Wall  
 
 # external libraries
-EXT_LIBS = -lfct -lclib  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lcvode -lctlapack -lctblas -lctf2c -lctcxx -lstdc++ -lgfortran
+EXT_LIBS = -lfct -lclib  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c -lctcxx -lstdc++ 
 
 # the Fortran 90/95 compiler
 F90 = gfortran
@@ -43,7 +43,7 @@ F90 = gfortran
 FLIBS= 
 
 # Fortran compile flags
-FORT_FLAGS = -fno-second-underscore -I. -I/usr/local/cantera/include/cantera -O3
+FORT_FLAGS =  -O3
 
 # the directory where the Cantera libraries are located
 CANTERA_LIBDIR=/usr/local/cantera/lib
@@ -55,7 +55,7 @@ CANTERA_INCDIR=/usr/local/cantera/include
 CANTERA_MODULE_DIR=/usr/local/cantera/include/cantera
 
 # flags passed to the C++ compiler/linker for the linking step
-LCXXFLAGS = -L$(CANTERA_LIBDIR)  -L/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu
+LCXXFLAGS = -L$(CANTERA_LIBDIR)  -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib
 
 # how to compile C++ source files to object files
 %.o : %.cpp

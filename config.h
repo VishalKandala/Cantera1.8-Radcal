@@ -11,7 +11,7 @@
 // Compile in additional debug printing where available.
 // Note, the printing may need to be turned on via a switch.
 // This just compiles in the code.
-/* #undef DEBUG_MODE */
+#define DEBUG_MODE 1
 
 // Compiling with PURIFY instrumentation
 /* #undef PURIFY_MODE */
@@ -45,9 +45,9 @@ typedef  int          ftnlen;       // Fortran hidden string length type
 #define FTN_TRAILING_UNDERSCORE 1
 
 
-/* #undef HAS_SUNDIALS */
+#define HAS_SUNDIALS 1
 /* #undef SUNDIALS_VERSION_22 */
-/* #undef SUNDIALS_VERSION_23 */
+#define SUNDIALS_VERSION_23 1
 
 //-------- LAPACK / BLAS ---------
 
@@ -101,7 +101,7 @@ typedef  int          ftnlen;       // Fortran hidden string length type
 // Cantera's setup. It identifies the python executable
 // used to run Python to process .cti files. Note that this is only
 // used if environment variable PYTHON_CMD is not set.
-#define PYTHON_EXE "/usr/bin/python2"
+#define PYTHON_EXE "usr/bin/python"
 
 // If this is defined, the Cantera Python interface will use the
 // Numeric package

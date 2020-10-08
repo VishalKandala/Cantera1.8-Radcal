@@ -38,10 +38,10 @@ shared_ctlib = 0
 CXX = g++
 
 # external libraries
-EXT_LIBS = -lzeroD -loneD  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lcvode -lctlapack -lctblas -lctf2c 
+EXT_LIBS = -lzeroD -loneD  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c 
 
 # the directory where the Cantera libraries are located
-CANTERA_LIBDIR=/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu
+CANTERA_LIBDIR=/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu
 # ../../../lib
 LIB_DEPS = $(CANTERA_LIBDIR)/libctbase.a \
            $(CANTERA_LIBDIR)/libequil.a \
@@ -67,9 +67,9 @@ LCXX_FLAGS = -L$(CANTERA_LIBDIR) -O3 -Wall
 LIB_NAME=libclib
 
 ifeq ($(shared_ctlib),1)
-CTLIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/$(LIB_NAME).so
+CTLIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/$(LIB_NAME).so
 else
-CTLIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/$(LIB_NAME).a
+CTLIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/$(LIB_NAME).a
 endif
 
 all: $(CTLIB) .depends

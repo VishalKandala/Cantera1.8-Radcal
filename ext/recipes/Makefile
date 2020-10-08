@@ -6,7 +6,7 @@
 .SUFFIXES :
 .SUFFIXES : .f .d .o
 
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/librecipes.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/librecipes.a
 
 do_ranlib = 1
 

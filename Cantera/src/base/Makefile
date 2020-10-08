@@ -15,7 +15,7 @@ INCDIR = ../../../build/include/cantera/kernel
 INSTALL_TSC = ../../../bin/install_tsc
 do_ranlib = 1
 
-debug_mode = 0
+debug_mode = 1
 ifeq ($(debug_mode), 1)
    DEBUG_FLAG=-DDEBUG_MODE
 else
@@ -37,7 +37,7 @@ BASE_H   = ct_defs.h ctexceptions.h logger.h XML_Writer.h \
            PrintCtrl.h LogPrintCtrl.h  mdp_allo.h
 
 CXX_INCLUDES = -I. 
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctbase.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctbase.a
 
 DEPENDS = $(BASE_OBJ:.o=.d)
 

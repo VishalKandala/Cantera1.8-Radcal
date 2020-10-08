@@ -74,18 +74,18 @@ endif
 #         CVODE/SUNDIALS LINKAGE
 ####################################################################
 #
-CANTERA_use_sundials = 0
+CANTERA_use_sundials = 1
 #
 # Includes for Sundials - none for cvode
 #
-CANTERA_CVODE_INCLUDE=
-CANTERA_SUNDIALS_LIB_DIR=
+CANTERA_CVODE_INCLUDE=-I/usr/local/include
+CANTERA_SUNDIALS_LIB_DIR=/usr/local/lib
 #
 # Link line for cvode and sundials
 #
 ifeq ($(CANTERA_use_sundials), 1)
-CANTERA_CVODE_LIBS=-L$(CANTERA_SUNDIALS_LIB_DIR) -lcvode
-CANTERA_CVODE_LIBS_DEP=
+CANTERA_CVODE_LIBS=-L$(CANTERA_SUNDIALS_LIB_DIR) -lsundials_cvodes -lsundials_nvecserial
+CANTERA_CVODE_LIBS_DEP=/usr/local/lib/libsundials_cvodes.a /usr/local/lib/libsundials_ida.a /usr/local/lib/libsundials_nvecserial.a
 else
 CANTERA_CVODE_LIBS= -L$(CANTERA_LIBSDIR) -lcvode
 CANTERA_CVODE_LIBS_DEP=$(CANTERA_LIBSDIR)/libcvode.a
@@ -124,7 +124,7 @@ CANTERA_TOTAL_INCLUDES= $(CANTERA_CORE_INCLUDES) $(CANTERA_BOOST_INCLUDES) $(CAN
 #
 # LIBS and LIBS should be the same ...
 #
-CANTERA_TOTAL_LIBS2 =  -L$(CANTERA_LIBSDIR)   -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lcvode -lctlapack -lctblas -lctf2c
+CANTERA_TOTAL_LIBS2 =  -L$(CANTERA_LIBSDIR)   -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c
 #
 CANTERA_TOTAL_LIBS= $(CANTERA_CORE_LIBS) $(CANTERA_BOOST_LIBS) \
                     $(CANTERA_CVODE_LIBS) $(CANTERA_BLAS_LAPACK_LIBS) \

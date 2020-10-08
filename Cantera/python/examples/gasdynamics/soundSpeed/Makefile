@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/gasdynamics/soundSpeed
 
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 run:
 	$(PYTHON_CMD) soundSpeed.py

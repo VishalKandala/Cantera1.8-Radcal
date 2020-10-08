@@ -11,7 +11,7 @@ BUILD_LAPACK=1
 BUILD_BLAS=1
 BUILD_WITH_F2C=1
 BUILD_F2C_LIB=1
-USE_SUNDIALS=0
+USE_SUNDIALS=1
 
 LIBS = blas/libctblas.a lapack/libctlapack.a math/libctmath.a \
        cvode/libcvode.a tpx/libtpx.a

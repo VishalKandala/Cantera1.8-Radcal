@@ -15,7 +15,7 @@ INCDIR = ../../../build/include/cantera/kernel
 INSTALL_TSC = ../../../bin/install_tsc
 do_ranlib = 1
 
-debug_mode = 0
+debug_mode = 1
 ifeq ($(debug_mode), 1)
    DEBUG_FLAG=-DDEBUG_MODE
 else
@@ -35,7 +35,7 @@ SPECTRA_OBJ = rotor.o LineBroadener.o
 SPECTRA_H   = rotor.h LineBroadener.h  Nuclei.h spectralUtilities.h
 
 CXX_INCLUDES = -I.  -I../base
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctspectra.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctspectra.a
 
 DEPENDS = $(SPECTRA_OBJ:.o=.d)
 

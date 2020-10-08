@@ -12,8 +12,8 @@
 have_python_site_package_topdir=0
 python_site_package_topdir=/usr/local/cantera
 
-CANTERA_LIBDIR= /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu
-LIB_DEPS =  /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libuser.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/liboneD.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libzeroD.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libequil.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libkinetics.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libtransport.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libthermo.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctnumerics.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctmath.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libtpx.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctspectra.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libconverters.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctbase.a /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libctf2c.a
+CANTERA_LIBDIR= /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu
+LIB_DEPS =  /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libuser.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/liboneD.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libzeroD.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libequil.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libkinetics.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libtransport.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libthermo.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctnumerics.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctmath.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libtpx.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctspectra.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libconverters.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctbase.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctf2c.a
 
 WIN_LIB_DEPS = $(CANTERA_LIBDIR)/cantera.lib $(CANTERA_LIBDIR)/zeroD.lib \
            $(CANTERA_LIBDIR)/oneD.lib \
@@ -52,7 +52,7 @@ win: _winbuild
 _build: $(SRCS) $(LIB_DEPS) Makefile setup.py
 	touch src/pycantera.cpp 
 	/bin/rm -f _build
-	(CXX="g++"; export CXX; CC="g++"; export CC; CFLAGS="$(CXX_FLAGS)"; export CFLAGS; PURIFY=""; export PURIFY; /usr/bin/python2 setup.py build)
+	(CXX="g++"; export CXX; CC="g++"; export CC; CFLAGS="$(CXX_FLAGS)"; export CFLAGS; PURIFY=""; export PURIFY; usr/bin/python setup.py build)
 	echo 'ok' > _build
 
 #
@@ -69,7 +69,7 @@ endif
 
 _winbuild: $(SRCS) $(WIN_LIB_DEPS) $(CLIB_DLL)
 	touch src/pycantera.cpp 
-	(/usr/bin/python2 setup.py build)
+	(usr/bin/python setup.py build)
 ifeq ($(use_clib_dll), 1)
 ifeq ($(have_python_site_package_topdir), 1)
 	(/usr/bin/install -c -m 755 $(CLIB_DLL) $(CLIB_EXP)  \
@@ -79,17 +79,17 @@ endif
 	echo 'ok' > _winbuild
 
 minbuild:
-	(/usr/bin/python2 setup.py build)
+	(usr/bin/python setup.py build)
 
 install:
 ifeq (0,1)
-	(/usr/bin/python2 setup.py install --prefix="/usr/local/cantera")
+	(usr/bin/python setup.py install --prefix="/usr/local/cantera")
 else
-	(/usr/bin/python2 setup.py install)
+	(usr/bin/python setup.py install)
 endif
 
 clean:
-	/usr/bin/python2 setup.py clean
+	usr/bin/python setup.py clean
 	rm -f _build; rm -f _winbuild
 	(cd build; rm -fR *)
 	cd src; rm -f *.o
@@ -98,10 +98,10 @@ depends:
 	echo '-'
 
 test:
-	cd examples; /usr/bin/python2 reactor1.py &> reactor1.out
-	cd examples; /usr/bin/python2 flame1.py  &> flame1.out
-	cd examples; /usr/bin/python2 diamond.py &> diamond.out
-	cd examples; /usr/bin/python2 critProperties.py  &> critProperties.out
+	cd examples; usr/bin/python reactor1.py &> reactor1.out
+	cd examples; usr/bin/python flame1.py  &> flame1.out
+	cd examples; usr/bin/python diamond.py &> diamond.out
+	cd examples; usr/bin/python critProperties.py  &> critProperties.out
 
 # end of file
 

@@ -29,7 +29,7 @@ ZEROD_H = Reactor.h ReactorBase.h FlowDevice.h Wall.h ReactorNet.h \
           ConstPressureReactor.h ReactorFactory.h
 
 CXX_INCLUDES = -I../base -I../thermo -I../kinetics -I../numerics 
-ZEROD_LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libzeroD.a
+ZEROD_LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libzeroD.a
 
 DEPENDS = $(OBJS:.o=.d)
 

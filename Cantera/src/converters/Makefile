@@ -31,7 +31,7 @@ CONV_H = CKReader.h      thermoFunctions.h \
          Species.h
 
 CXX_INCLUDES = -I. -I../base -I../numerics
-CONV_LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libconverters.a
+CONV_LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libconverters.a
 
 DEPENDS = $(OBJS:.o=.d)
 

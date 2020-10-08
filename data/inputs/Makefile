@@ -6,7 +6,7 @@ SUFFIXES= .inp .log .dat
 # list all mechanism files here
 MECHS = 
 
-BUILDBIN=/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/bin/x86_64-unknown-linux-gnu
+BUILDBIN=/Cantera1.8-Radcal/build/bin/x86_64-unknown-linux-gnu
 
 all: gri30.xml
 

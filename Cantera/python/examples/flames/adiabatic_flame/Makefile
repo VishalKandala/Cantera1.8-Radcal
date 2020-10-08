@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/flames/adiabatic_flame
 
-PYTHON_CMD = /usr/bin/python2
+PYTHON_CMD = usr/bin/python
 
 run:
 	$(PYTHON_CMD) adiabatic_flame.py

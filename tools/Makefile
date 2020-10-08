@@ -16,10 +16,10 @@ apps:
 apps-install:
 	/usr/bin/install -c -d /usr/local/cantera/bin
 ifeq ($(build_ck),1)
-	/usr/bin/install -c -c /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/bin/x86_64-unknown-linux-gnu/ck2cti /usr/local/cantera/bin
+	/usr/bin/install -c -c /Cantera1.8-Radcal/build/bin/x86_64-unknown-linux-gnu/ck2cti /usr/local/cantera/bin
 endif
-	/usr/bin/install -c -c /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/bin/x86_64-unknown-linux-gnu/cti2ctml /usr/local/cantera/bin
-	/usr/bin/install -c -c /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/bin/x86_64-unknown-linux-gnu/csvdiff /usr/local/cantera/bin
+	/usr/bin/install -c -c /Cantera1.8-Radcal/build/bin/x86_64-unknown-linux-gnu/cti2ctml /usr/local/cantera/bin
+	/usr/bin/install -c -c /Cantera1.8-Radcal/build/bin/x86_64-unknown-linux-gnu/csvdiff /usr/local/cantera/bin
 
 man-install:
 	/usr/bin/install -c -d /usr/local/cantera/man1
@@ -59,5 +59,5 @@ templates-install:
                   /usr/bin/install -c -c $${ihhh} /usr/local/cantera/templates/cxx ; \
                   echo "/usr/bin/install -c -c $${ihhh} /usr/local/cantera/templates/cxx" ; \
          done ) 
-	chown -R wenjiang /usr/local/cantera/templates
+	chown -R root /usr/local/cantera/templates
 

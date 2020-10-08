@@ -36,7 +36,7 @@ CXX_INCLUDES = -I../../src/base -I../../src/thermo
 	g++ -MM $(CXX_FLAGS) $(CXX_INCLUDES) $*.cpp > $*.d
 
 LIB_NAME=libctcxx
-CXXLIB=/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/$(LIB_NAME).a
+CXXLIB=/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/$(LIB_NAME).a
 
 all: .depends $(CXXLIB)
 

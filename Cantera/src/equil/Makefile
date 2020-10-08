@@ -25,7 +25,7 @@ PURIFY=
 # (from Goodwin's code). Both should produce the same results.
 do_AltLinProg = 1
 
-debug_mode = 0
+debug_mode = 1
 ifeq ($(debug_mode), 1)
    DEBUG_FLAG=-DDEBUG_MODE
 else
@@ -83,10 +83,10 @@ VCSNONIDEAL_H =   vcs_internal.h vcs_VolPhase.h vcs_solve.h vcs_prob.h \
 endif
 
 CXX_INCLUDES = -I../base -I../thermo -I../numerics 
-LIB = /home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libequil.a
+LIB = /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libequil.a
 
 ifeq ($(do_VCSnonideal), 1)
-  VLIB=/home/wenjiang/Downloads/cantera-1.8-Duffour-test/build/lib/x86_64-unknown-linux-gnu/libVCSnonideal.a 
+  VLIB=/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libVCSnonideal.a 
 endif
 
 DEPENDS = $(EQUIL_OBJ:.o=.d) $(VCSNONIDEAL_OBJ:.o=.d)
