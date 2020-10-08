@@ -78,14 +78,14 @@ CANTERA_use_sundials = 1
 #
 # Includes for Sundials - none for cvode
 #
-CANTERA_CVODE_INCLUDE=-I/usr/local/include
-CANTERA_SUNDIALS_LIB_DIR=/usr/local/lib
+CANTERA_CVODE_INCLUDE=-I/usr/local/bin//include
+CANTERA_SUNDIALS_LIB_DIR=/usr/local/bin//lib
 #
 # Link line for cvode and sundials
 #
 ifeq ($(CANTERA_use_sundials), 1)
 CANTERA_CVODE_LIBS=-L$(CANTERA_SUNDIALS_LIB_DIR) -lsundials_cvodes -lsundials_nvecserial
-CANTERA_CVODE_LIBS_DEP=/usr/local/lib/libsundials_cvodes.a /usr/local/lib/libsundials_ida.a /usr/local/lib/libsundials_nvecserial.a
+CANTERA_CVODE_LIBS_DEP=/usr/local/bin//lib/libsundials_cvodes.a /usr/local/bin//lib/libsundials_ida.a /usr/local/bin//lib/libsundials_nvecserial.a
 else
 CANTERA_CVODE_LIBS= -L$(CANTERA_LIBSDIR) -lcvode
 CANTERA_CVODE_LIBS_DEP=$(CANTERA_LIBSDIR)/libcvode.a

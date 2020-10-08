@@ -8,7 +8,7 @@ build_ck = 1
 
 PURIFY=
 
-LCXX_FLAGS = -L$(LIBDIR)   -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib -O3 -Wall  
+LCXX_FLAGS = -L$(LIBDIR)   -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/bin//lib -O3 -Wall  
 LOCAL_LIBS = -lcantera -lckreader -lcvode -lctmath @LAPACK_LIBRARY@ @BLAS_LIBRARY@ -lctcxx
 
 LCXX_END_LIBS = -lctf2c -lm

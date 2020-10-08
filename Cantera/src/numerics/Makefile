@@ -24,7 +24,7 @@ endif
 
 use_sundials=1
 
-SUNDIALS_INC=-I/usr/local/include
+SUNDIALS_INC=-I/usr/local/bin//include
 
 PURIFY= 
 

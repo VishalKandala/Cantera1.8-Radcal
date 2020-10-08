@@ -55,7 +55,7 @@ if need_cathermo == 1:
 extra_link = linkargs + " " + ""
 linkargs = extra_link.split()    
 
-bldirstr = " -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib"
+bldirstr = " -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/bin//lib"
 bldirs = bldirstr.replace('-L',' ')
 dirlist = bldirs.split()
 libdir = ['/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu']

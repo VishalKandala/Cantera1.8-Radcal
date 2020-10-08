@@ -854,6 +854,7 @@ config.status:947: creating test_problems/VPsilane_test/runtest
 config.status:947: creating test_problems/VCSnonideal/NaCl_equil/Makefile
 config.status:947: creating bin/install_tsc
 config.status:1051: creating config.h
+config.status:1243: config.h is unchanged
 
 ## ---------------- ##
 ## Cache variables. ##
@@ -1015,7 +1016,7 @@ LIBS=''
 LIB_DIR=''
 LOCAL_LIBS=' -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c'
 LOCAL_LIBS_DEP=' /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libuser.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/liboneD.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libzeroD.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libequil.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libkinetics.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libtransport.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libthermo.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctnumerics.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctmath.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libtpx.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctspectra.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libconverters.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctbase.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctf2c.a'
-LOCAL_LIB_DIRS=' -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib'
+LOCAL_LIB_DIRS=' -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/bin//lib'
 LTLIBOBJS=''
 MAKE='make'
 MATLAB_CMD='default'
@@ -1108,10 +1109,10 @@ python_prefix='/usr/local/cantera'
 python_win_prefix='/usr/local/cantera'
 sbindir='${exec_prefix}/sbin'
 sharedstatedir='${prefix}/com'
-sundials_include='-I/usr/local/include'
-sundials_lib='-L/usr/local/lib -lsundials_cvodes -lsundials_ida -lsundials_nvecserial'
-sundials_lib_dep='/usr/local/lib/libsundials_cvodes.a /usr/local/lib/libsundials_ida.a /usr/local/lib/libsundials_nvecserial.a'
-sundials_lib_dir='/usr/local/lib'
+sundials_include='-I/usr/local/bin//include'
+sundials_lib='-L/usr/local/bin//lib -lsundials_cvodes -lsundials_ida -lsundials_nvecserial'
+sundials_lib_dep='/usr/local/bin//lib/libsundials_cvodes.a /usr/local/bin//lib/libsundials_ida.a /usr/local/bin//lib/libsundials_nvecserial.a'
+sundials_lib_dir='/usr/local/bin//lib'
 sysconfdir='${prefix}/etc'
 target='x86_64-unknown-linux-gnu'
 target_alias=''

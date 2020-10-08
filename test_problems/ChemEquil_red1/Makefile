@@ -77,7 +77,7 @@ endif
 ALT_LIBS_DEP := $(addprefix $(CANTER_LIBDIR),  libuser.a liboneD.a libzeroD.a libequil.a libkinetics.a libtransport.a libthermo.a libctnumerics.a libctmath.a libtpx.a libctspectra.a libconverters.a libctbase.a libctf2c.a libctcxx.a)
 
 # flags passed to the C++ compiler/linker for the linking step
-LCXX_FLAGS = -O3 -Wall     -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib 
+LCXX_FLAGS = -O3 -Wall     -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/bin//lib 
 
 # How to compile C++ source files to object files
 .cpp.o:

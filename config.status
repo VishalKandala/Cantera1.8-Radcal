@@ -685,10 +685,10 @@ s,@OBJEXT@,o,;t t
 s,@use_sundials@,1,;t t
 s,@CVODE_LIBS@,-lsundials_cvodes -lsundials_nvecserial,;t t
 s,@IDA_LIBS@,-lsundials_ida -lsundials_nvecserial,;t t
-s,@sundials_include@,-I/usr/local/include,;t t
-s,@sundials_lib_dir@,/usr/local/lib,;t t
-s,@sundials_lib@,-L/usr/local/lib -lsundials_cvodes -lsundials_ida -lsundials_nvecserial,;t t
-s,@sundials_lib_dep@,/usr/local/lib/libsundials_cvodes.a /usr/local/lib/libsundials_ida.a /usr/local/lib/libsundials_nvecserial.a,;t t
+s,@sundials_include@,-I/usr/local/bin//include,;t t
+s,@sundials_lib_dir@,/usr/local/bin//lib,;t t
+s,@sundials_lib@,-L/usr/local/bin//lib -lsundials_cvodes -lsundials_ida -lsundials_nvecserial,;t t
+s,@sundials_lib_dep@,/usr/local/bin//lib/libsundials_cvodes.a /usr/local/bin//lib/libsundials_ida.a /usr/local/bin//lib/libsundials_nvecserial.a,;t t
 s,@CANTERA_DEBUG_MODE@,1,;t t
 s,@COMPILE_PURE_FLUIDS@,1,;t t
 s,@phase_object_files@, SemiconductorPhase.o StoichSubstance.o PureFluidPhase.o LatticeSolidPhase.o LatticePhase.o,;t t
@@ -718,7 +718,7 @@ s,@build_with_f2c@,1,;t t
 s,@build_f2c_lib@,1,;t t
 s,@F2C_SYSTEMLIB@,,;t t
 s,@BOOST_LIB_DIR@,,;t t
-s,@LOCAL_LIB_DIRS@, -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib,;t t
+s,@LOCAL_LIB_DIRS@, -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/bin//lib,;t t
 s,@LOCAL_LIBS@, -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c,;t t
 s,@LOCAL_LIBS_DEP@, /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libuser.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/liboneD.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libzeroD.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libequil.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libkinetics.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libtransport.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libthermo.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctnumerics.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctmath.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libtpx.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctspectra.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libconverters.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctbase.a /Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu/libctf2c.a,;t t
 s,@INSTALL_LIBS_DEP@, /usr/local/cantera/lib/libequil.a /usr/local/cantera/lib/libkinetics.a /usr/local/cantera/lib/libtransport.a /usr/local/cantera/lib/libthermo.a /usr/local/cantera/lib/libctnumerics.a /usr/local/cantera/lib/libctmath.a /usr/local/cantera/lib/libtpx.a /usr/local/cantera/lib/libctspectra.a /usr/local/cantera/lib/libconverters.a /usr/local/cantera/lib/libctbase.a /usr/local/cantera/lib/libctf2c.a,;t t

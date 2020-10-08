@@ -78,7 +78,7 @@ CANTERA_use_sundials = 1
 #
 # Includes for Sundials - none for cvode
 #
-CANTERA_CVODE_INCLUDE=-I/usr/local/include
+CANTERA_CVODE_INCLUDE=-I/usr/local/bin//include
 #
 # Link line for cvode and sundials
 #
@@ -118,7 +118,7 @@ endif
 
 CANTERA_TOTAL_INCLUDES= $(CANTERA_CORE_INCLUDES) $(CANTERA_BOOST_INCLUDES) $(CANTERA_CVODE_INCLUDE)
 
-CANTERA_TOTAL_LIBS2 =  -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/lib  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c
+CANTERA_TOTAL_LIBS2 =  -L/Cantera1.8-Radcal/build/lib/x86_64-unknown-linux-gnu -L/usr/local/bin//lib  -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase -lsundials_cvodes -lsundials_nvecserial -lctlapack -lctblas -lctf2c
 
 CANTERA_TOTAL_LIBS= $(CANTERA_CORE_LIBS) $(CANTERA_BOOST_LIBS) \
                     $(CANTERA_CVODE_LIBS) $(CANTERA_BLAS_LAPACK_LIBS) \
