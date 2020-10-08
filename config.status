@@ -728,7 +728,7 @@ s,@CANTERA_CORE_LIBS_DEP@, /usr/local/cantera/lib/libequil.a /usr/local/cantera/
 s,@CT_SHARED_LIB@,clib,;t t
 s,@PYTHON_CMD@,usr/bin/python2.6,;t t
 s,@BUILD_PYTHON@,2,;t t
-s,@NUMPY_INC_DIR@,,;t t
+s,@NUMPY_INC_DIR@,/usr/local/lib/python2.6/dist-packages/numpy/core/include,;t t
 s,@NUMPY_HOME@,,;t t
 s,@NUMARRAY_INC_DIR@,,;t t
 s,@NUMARRAY_HOME@,,;t t

@@ -19,7 +19,7 @@ if 1 <> 1:
 linkargs = '  -L/usr/local/lib'
 
 numarray_incl = ""
-numpy_incl = ""
+numpy_incl = "/usr/local/lib/python2.6/dist-packages/numpy/core/include"
 
 num_collect = []
 if (type(numarray_incl).__name__=='str') :
