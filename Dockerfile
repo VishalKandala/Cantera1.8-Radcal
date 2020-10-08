@@ -1,6 +1,6 @@
 # cantera-1.8-build-docker
 ## Pre-setup
-FROM ubuntu:xenial-20200916
+FROM i386/ubuntu:xenial
 ### Calling ubuntu 16.04 Docker Image for extension. 
 MAINTAINER "Vishal Indivar Kandala (VIKing)"
 RUN mkdir /pkg/
@@ -50,15 +50,15 @@ RUN DEBIAN_FRONTEND=noninteractive wget https://computing.llnl.gov/projects/sund
 RUN DEBIAN_FRONTEND=noninteractive tar -xf sundials-2.3.0.tar.gz
 RUN cd sundials-2.3.0
 WORKDIR /sundials-2.3.0/
-RUN ./configure --with-cflags=-fPIC>sundials-comp.output
-RUN make
-RUN make install
+RUN DEBIAN_FRONTEND=noninteractive ./configure --with-cflags=-fPIC
+RUN DEBIAN_FRONTEND=noninteractive make
+RUN DEBIAN_FRONTEND=noninteractive make install
 WORKDIR /Cantera1.8-Radcal
-RUN chmod +x preconfig
-RUN ./preconfig>preconfig-c18r.output
+#RUN chmod +x preconfig
+#RUN ./preconfig>preconfig-c18r.output
 ### Run preconfig
-RUN make>compile-c18r.output
+#RUN make>compile-c18r.output
 ### Generate make files
-RUN make install>install-c18r.output
+#RUN make install>install-c18r.output
 ### Install from make files
 #RUN source ~/setup_cantera
