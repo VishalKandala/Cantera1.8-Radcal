@@ -1,6 +1,6 @@
 import sys, os, string
 prefix = '/usr/local/cantera' 
-pycmd = 'usr/bin/python2.6' # sys.argv[2]
+pycmd = '/usr/bin/python2.6' # sys.argv[2]
 localinst = 0
 
 build_python = 2

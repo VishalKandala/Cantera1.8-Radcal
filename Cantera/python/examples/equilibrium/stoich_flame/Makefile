@@ -3,7 +3,7 @@
 INST_DIR=/usr/local/cantera/demos/python/equilibrium/stoich_flame
 
 
-PYTHON_CMD = usr/bin/python2.6
+PYTHON_CMD = /usr/bin/python2.6
 
 run:
 	$(PYTHON_CMD) stoich.py

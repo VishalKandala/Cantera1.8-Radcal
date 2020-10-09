@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/misc
 
-PYTHON_CMD = usr/bin/python2.6
+PYTHON_CMD = /usr/bin/python2.6
 
 run:
 	$(PYTHON_CMD) rxnpath1.py

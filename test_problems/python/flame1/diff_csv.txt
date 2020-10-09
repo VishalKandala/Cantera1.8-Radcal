@@ -1,0 +1,13 @@
+
+----------------------------------------------------------
+csvdiff: CSVFile comparison utility program
+         Version $Revision: 1.17 $
+         Harry K. Moffat Div. 9114 Sandia National Labs
+         
+         First  CSV File = flame1_blessed.csv
+         Second CSV file = flame1.csv
+
+         Absolute tol = 1e-10
+         Relative tol = 0.001
+----------------------------------------------------------
+

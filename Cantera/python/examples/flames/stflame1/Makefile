@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/flames/stflame1
 
-PYTHON_CMD = usr/bin/python2.6
+PYTHON_CMD = /usr/bin/python2.6
 
 run:
 	$(PYTHON_CMD) stflame1.py

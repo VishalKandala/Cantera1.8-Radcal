@@ -3,7 +3,7 @@
 INST_DIR=/usr/local/cantera/demos/python/surface_chemistry/catcomb_stagflow
 
 
-PYTHON_CMD = usr/bin/python2.6
+PYTHON_CMD = /usr/bin/python2.6
 
 all:
 

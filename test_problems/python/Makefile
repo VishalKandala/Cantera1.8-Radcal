@@ -2,12 +2,12 @@
 
 # test target -> make the program and run the test
 test:
-	./runtest usr/bin/python2.6
-	@cd tut1; ./runtest usr/bin/python2.6
-	@cd tut2; ./runtest usr/bin/python2.6
-	@cd tut3; ./runtest usr/bin/python2.6
-	@cd tut4; ./runtest usr/bin/python2.6
-	@cd flame1; ./runtest usr/bin/python2.6
+	./runtest /usr/bin/python2.6
+	@cd tut1; ./runtest /usr/bin/python2.6
+	@cd tut2; ./runtest /usr/bin/python2.6
+	@cd tut3; ./runtest /usr/bin/python2.6
+	@cd tut4; ./runtest /usr/bin/python2.6
+	@cd flame1; ./runtest /usr/bin/python2.6
 
 # clean target -> clean up
 clean:

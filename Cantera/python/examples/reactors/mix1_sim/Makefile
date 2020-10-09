@@ -2,7 +2,7 @@
 
 INST_DIR=/usr/local/cantera/demos/python/reactors/mix1_sim
 
-PYTHON_CMD = usr/bin/python2.6
+PYTHON_CMD = /usr/bin/python2.6
 
 all:
 

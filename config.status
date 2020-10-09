@@ -726,7 +726,7 @@ s,@RAW_LIBS_DEP@, libuser.a liboneD.a libzeroD.a libequil.a libkinetics.a libtra
 s,@CANTERA_CORE_LIBS@, -luser -loneD -lzeroD -lequil -lkinetics -ltransport -lthermo -lctnumerics -lctmath -ltpx -lctspectra -lconverters -lctbase,;t t
 s,@CANTERA_CORE_LIBS_DEP@, /usr/local/cantera/lib/libequil.a /usr/local/cantera/lib/libkinetics.a /usr/local/cantera/lib/libtransport.a /usr/local/cantera/lib/libthermo.a /usr/local/cantera/lib/libctnumerics.a /usr/local/cantera/lib/libctmath.a /usr/local/cantera/lib/libtpx.a /usr/local/cantera/lib/libctspectra.a /usr/local/cantera/lib/libconverters.a /usr/local/cantera/lib/libctbase.a,;t t
 s,@CT_SHARED_LIB@,clib,;t t
-s,@PYTHON_CMD@,usr/bin/python2.6,;t t
+s,@PYTHON_CMD@,/usr/bin/python2.6,;t t
 s,@BUILD_PYTHON@,2,;t t
 s,@NUMPY_INC_DIR@,/usr/local/lib/python2.6/dist-packages/numpy/core/include,;t t
 s,@NUMPY_HOME@,,;t t
@@ -1116,7 +1116,7 @@ ${ac_dA}WITH_REACTIONPATHS${ac_dB}WITH_REACTIONPATHS${ac_dC}1${ac_dD}
 ${ac_dA}INCL_PURE_FLUIDS${ac_dB}INCL_PURE_FLUIDS${ac_dC}1${ac_dD}
 ${ac_dA}WITH_SPECTRA${ac_dB}WITH_SPECTRA${ac_dC}1${ac_dD}
 ${ac_dA}WITH_HTML_LOGS${ac_dB}WITH_HTML_LOGS${ac_dC}1${ac_dD}
-${ac_dA}PYTHON_EXE${ac_dB}PYTHON_EXE${ac_dC}"usr/bin/python2.6"${ac_dD}
+${ac_dA}PYTHON_EXE${ac_dB}PYTHON_EXE${ac_dC}"/usr/bin/python2.6"${ac_dD}
 ${ac_dA}HAS_NUMPY${ac_dB}HAS_NUMPY${ac_dC}1${ac_dD}
 ${ac_dA}STDC_HEADERS${ac_dB}STDC_HEADERS${ac_dC}1${ac_dD}
 ${ac_dA}HAVE_SYS_TYPES_H${ac_dB}HAVE_SYS_TYPES_H${ac_dC}1${ac_dD}
@@ -1138,13 +1138,13 @@ CEOF
 t clr
 : clr
 ${ac_dA}SIZEOF_INT${ac_dB}SIZEOF_INT${ac_dC}4${ac_dD}
-${ac_dA}SIZEOF_LONG${ac_dB}SIZEOF_LONG${ac_dC}8${ac_dD}
-${ac_dA}SIZEOF_VOID_P${ac_dB}SIZEOF_VOID_P${ac_dC}8${ac_dD}
+${ac_dA}SIZEOF_LONG${ac_dB}SIZEOF_LONG${ac_dC}4${ac_dD}
+${ac_dA}SIZEOF_VOID_P${ac_dB}SIZEOF_VOID_P${ac_dC}4${ac_dD}
 ${ac_dA}SIZEOF_CHAR${ac_dB}SIZEOF_CHAR${ac_dC}1${ac_dD}
 ${ac_dA}SIZEOF_SHORT${ac_dB}SIZEOF_SHORT${ac_dC}2${ac_dD}
 ${ac_dA}SIZEOF_FLOAT${ac_dB}SIZEOF_FLOAT${ac_dC}4${ac_dD}
 ${ac_dA}SIZEOF_DOUBLE${ac_dB}SIZEOF_DOUBLE${ac_dC}8${ac_dD}
-${ac_dA}SIZEOF_FPOS_T${ac_dB}SIZEOF_FPOS_T${ac_dC}16${ac_dD}
+${ac_dA}SIZEOF_FPOS_T${ac_dB}SIZEOF_FPOS_T${ac_dC}12${ac_dD}
 ${ac_dA}HAS_SSTREAM${ac_dB}HAS_SSTREAM${ac_dC}1${ac_dD}
 ${ac_dA}LAPACK_FTN_TRAILING_UNDERSCORE${ac_dB}LAPACK_FTN_TRAILING_UNDERSCORE${ac_dC}1${ac_dD}
 ${ac_dA}FTN_TRAILING_UNDERSCORE${ac_dB}FTN_TRAILING_UNDERSCORE${ac_dC}1${ac_dD}
@@ -1188,7 +1188,7 @@ ${ac_uA}WITH_REACTIONPATHS${ac_uB}WITH_REACTIONPATHS${ac_uC}1${ac_uD}
 ${ac_uA}INCL_PURE_FLUIDS${ac_uB}INCL_PURE_FLUIDS${ac_uC}1${ac_uD}
 ${ac_uA}WITH_SPECTRA${ac_uB}WITH_SPECTRA${ac_uC}1${ac_uD}
 ${ac_uA}WITH_HTML_LOGS${ac_uB}WITH_HTML_LOGS${ac_uC}1${ac_uD}
-${ac_uA}PYTHON_EXE${ac_uB}PYTHON_EXE${ac_uC}"usr/bin/python2.6"${ac_uD}
+${ac_uA}PYTHON_EXE${ac_uB}PYTHON_EXE${ac_uC}"/usr/bin/python2.6"${ac_uD}
 ${ac_uA}HAS_NUMPY${ac_uB}HAS_NUMPY${ac_uC}1${ac_uD}
 ${ac_uA}STDC_HEADERS${ac_uB}STDC_HEADERS${ac_uC}1${ac_uD}
 ${ac_uA}HAVE_SYS_TYPES_H${ac_uB}HAVE_SYS_TYPES_H${ac_uC}1${ac_uD}
@@ -1210,13 +1210,13 @@ CEOF
 t clr
 : clr
 ${ac_uA}SIZEOF_INT${ac_uB}SIZEOF_INT${ac_uC}4${ac_uD}
-${ac_uA}SIZEOF_LONG${ac_uB}SIZEOF_LONG${ac_uC}8${ac_uD}
-${ac_uA}SIZEOF_VOID_P${ac_uB}SIZEOF_VOID_P${ac_uC}8${ac_uD}
+${ac_uA}SIZEOF_LONG${ac_uB}SIZEOF_LONG${ac_uC}4${ac_uD}
+${ac_uA}SIZEOF_VOID_P${ac_uB}SIZEOF_VOID_P${ac_uC}4${ac_uD}
 ${ac_uA}SIZEOF_CHAR${ac_uB}SIZEOF_CHAR${ac_uC}1${ac_uD}
 ${ac_uA}SIZEOF_SHORT${ac_uB}SIZEOF_SHORT${ac_uC}2${ac_uD}
 ${ac_uA}SIZEOF_FLOAT${ac_uB}SIZEOF_FLOAT${ac_uC}4${ac_uD}
 ${ac_uA}SIZEOF_DOUBLE${ac_uB}SIZEOF_DOUBLE${ac_uC}8${ac_uD}
-${ac_uA}SIZEOF_FPOS_T${ac_uB}SIZEOF_FPOS_T${ac_uC}16${ac_uD}
+${ac_uA}SIZEOF_FPOS_T${ac_uB}SIZEOF_FPOS_T${ac_uC}12${ac_uD}
 ${ac_uA}HAS_SSTREAM${ac_uB}HAS_SSTREAM${ac_uC}1${ac_uD}
 ${ac_uA}LAPACK_FTN_TRAILING_UNDERSCORE${ac_uB}LAPACK_FTN_TRAILING_UNDERSCORE${ac_uC}1${ac_uD}
 ${ac_uA}FTN_TRAILING_UNDERSCORE${ac_uB}FTN_TRAILING_UNDERSCORE${ac_uC}1${ac_uD}

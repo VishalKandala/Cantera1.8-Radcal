@@ -198,7 +198,7 @@ ifeq ($(os_is_win),0)
 	cp -f License.txt "/usr/local/cantera/bin"
 ifneq ($(build_python),0)
 	/usr/bin/install -c -c tools/src/finish_install.py tools/bin
-	(PYTHONPATH=''; usr/bin/python2.6 tools/bin/finish_install.py /usr/local/cantera usr/bin/python2.6)
+	(PYTHONPATH=''; /usr/bin/python2.6 tools/bin/finish_install.py /usr/local/cantera /usr/bin/python2.6)
 	cp -f "/root/setup_cantera" "/usr/local/cantera/bin"
 	chmod +x /usr/local/cantera/bin/setup_cantera
 	chmod +x /usr/local/cantera/bin/ctnew
