@@ -53,12 +53,13 @@ WORKDIR /sundials-2.3.0/
 RUN DEBIAN_FRONTEND=noninteractive ./configure --with-cflags=-fPIC
 RUN DEBIAN_FRONTEND=noninteractive make
 RUN DEBIAN_FRONTEND=noninteractive make install
+RUN DEBIAN_FRONTEND=noninteractive apt-get update
 WORKDIR /Cantera1.8-Radcal
-#RUN chmod +x preconfig
-#RUN ./preconfig>preconfig-c18r.output
+RUN chmod +x preconfig
+RUN ./preconfig
 ### Run preconfig
-#RUN make>compile-c18r.output
+RUN make
 ### Generate make files
-#RUN make install>install-c18r.output
+RUN make install
 ### Install from make files
-#RUN source ~/setup_cantera
+RUN source ~/setup_cantera
