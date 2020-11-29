@@ -70,83 +70,178 @@
           0           0 
 ..............................................................................
 
-Attempt Newton solution of steady-state problem...    failure. 
+Attempt Newton solution of steady-state problem...
+
+     log10(ss)     log10(s1)   N_jac 
+    ------------------------------------
+        2.3811        5.9568       1 
+Re-evaluating Jacobian, since no damping coefficient
+could be found with this Jacobian.
+
+        2.3402        5.7750       2 
+Re-evaluating Jacobian, since no damping coefficient
+could be found with this Jacobian.
+    failure. 
 
 ..............................................................................
-Take 1 timesteps       7.5e-06      2.167 
+Take 1 timesteps   
+
+ step    size (s)    log10(ss) 
+===============================
+    0       1e-05       2.381...failure.
+    0       5e-06       2.381
 ..............................................................................
 
-Attempt Newton solution of steady-state problem...    failure. 
+Attempt Newton solution of steady-state problem...
+
+     log10(ss)     log10(s1)   N_jac 
+    ------------------------------------
+        2.1674        5.5274       4 
+Maximum Jacobian age reached (5)
+    failure. 
 
 ..............................................................................
-Take 2 timesteps     8.438e-06      1.881 
+Take 2 timesteps   
+
+ step    size (s)    log10(ss) 
+===============================
+    0     7.5e-06       2.167...failure.
+    0    3.75e-06       2.167
+    1   5.625e-06       2.027
 ..............................................................................
 
-Attempt Newton solution of steady-state problem...    failure. 
+Attempt Newton solution of steady-state problem...
+Maximum Jacobian age reached (5)
+
+
+     log10(ss)     log10(s1)   N_jac 
+    ------------------------------------
+        1.8807        5.4872       7 
+Re-evaluating Jacobian, since no damping coefficient
+could be found with this Jacobian.
+    failure. 
 
 ..............................................................................
-Take 5 timesteps     1.602e-05      1.879 
+Take 5 timesteps   
+
+ step    size (s)    log10(ss) 
+===============================
+    0   8.438e-06       1.881...failure.
+    0   4.219e-06       1.881
+    1   6.328e-06       1.799
+    2   9.492e-06       1.787
+    3   1.424e-05       1.832...failure.
+    3   7.119e-06       1.832
+    4   1.068e-05       1.856
 ..............................................................................
 
-Attempt Newton solution of steady-state problem...    failure. 
+Attempt Newton solution of steady-state problem...
+
+     log10(ss)     log10(s1)   N_jac 
+    ------------------------------------
+        1.8786        6.2081       10 
+Maximum Jacobian age reached (5)
+    failure. 
 
 ..............................................................................
-Take 10 timesteps     5.773e-05      1.661 
+Take 10 timesteps   
+
+ step    size (s)    log10(ss) 
+===============================
+    0   1.602e-05       1.879...failure.
+    0   8.009e-06       1.879
+    1   1.201e-05       1.888
+    2   1.802e-05       1.889
+    3   2.703e-05       1.931...failure.
+    3   1.352e-05       1.931
+    4   2.027e-05       1.965
+    5   3.041e-05       1.996
+    6   4.561e-05           2...failure.
+    6   2.281e-05           2
+    7   3.421e-05       1.972
+    8   5.132e-05       1.893...failure.
+    8   2.566e-05       1.893
+    9   3.849e-05       1.807
 ..............................................................................
 
-Attempt Newton solution of steady-state problem...    failure. 
+Attempt Newton solution of steady-state problem...
+Maximum Jacobian age reached (5)
+
+
+     log10(ss)     log10(s1)   N_jac 
+    ------------------------------------
+        1.6611        5.5311       16 
+Re-evaluating Jacobian, since no damping coefficient
+could be found with this Jacobian.
+
+        2.2547        4.8320       17 
+Re-evaluating Jacobian, since no damping coefficient
+could be found with this Jacobian.
+
+        2.3407        4.6168       18 
+        2.3030        4.5991       18 
+        2.2853        4.5630       18 
+Re-evaluating Jacobian, since no damping coefficient
+could be found with this Jacobian.
+
+        2.2846        4.2226       19 
+Re-evaluating Jacobian, since no damping coefficient
+could be found with this Jacobian.
+    failure. 
 
 ..............................................................................
-Take 10 timesteps      0.000104      1.454 
+Take 10 timesteps   
+
+ step    size (s)    log10(ss) 
+===============================
+    0   5.773e-05       1.661...failure.
+    0   2.887e-05       1.661
+    1    4.33e-05       1.533
+    2   6.495e-05       1.487...failure.
+    2   3.247e-05       1.487
+    3   4.871e-05        1.52
+    4   7.306e-05        1.56
+    5   0.0001096       1.595...failure.
+    5    5.48e-05       1.595
+    6    8.22e-05       1.603
+    7   0.0001233       1.589...failure.
+    7   6.165e-05       1.589
+    8   9.247e-05       1.565
+    9   0.0001387       1.508...failure.
+    9   6.935e-05       1.508
 ..............................................................................
 
-Attempt Newton solution of steady-state problem...    success.
+Attempt Newton solution of steady-state problem...
+
+     log10(ss)     log10(s1)   N_jac 
+    ------------------------------------
+        1.4537        4.5906       25 
+        2.7863        4.4831       25 
+Maximum Jacobian age reached (5)
+
+        2.2829        5.8161       26 
+        2.2394        5.7060       26 
+        2.1396        5.5320       26 
+        2.1115        5.3641       26 
+        2.0394        5.2315       26 
+        1.9807        4.7481       26 
+Maximum Jacobian age reached (5)
+
+        1.9239        1.7657       27 
+       -0.0049        0.1248       27 
+       -1.3410       -0.8828       27     success.
 
 Problem solved on [11] point grid(s).
 
-##############################################################################
-Refining grid in flame.
-    New points inserted after grid points 0 1 
-    to resolve H HO2 
+grid refinement disabled.
 ..............................................................................
 
-Attempt Newton solution of steady-state problem...    success.
-
-Problem solved on [13] point grid(s).
-
-##############################################################################
-Refining grid in flame.
-    New points inserted after grid points 0 
-    to resolve H2O2 HO2 
-..............................................................................
-
-Attempt Newton solution of steady-state problem...    success.
-
-Problem solved on [14] point grid(s).
-
-##############################################################################
-Refining grid in flame.
-    New points inserted after grid points 0 
-    to resolve H2O2 HO2 
-..............................................................................
-
-Attempt Newton solution of steady-state problem...    success.
-
-Problem solved on [15] point grid(s).
-
-##############################################################################
-Refining grid in flame.
-    New points inserted after grid points 0 
-    to resolve HO2 
-..............................................................................
-
-Attempt Newton solution of steady-state problem...    success.
-
-Problem solved on [16] point grid(s).
-
-no new points needed in flame
-..............................................................................
-
-Attempt Newton solution of steady-state problem...    failure. 
+Attempt Newton solution of steady-state problem...
+Maximum Jacobian age reached (5)
+    failure. 
 
 ..............................................................................
+Take 1 timesteps   
+
+ step    size (s)    log10(ss) 
+===============================

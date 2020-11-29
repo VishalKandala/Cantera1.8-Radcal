@@ -668,7 +668,8 @@ namespace Cantera {
 							Vi[j] *= - m_multidiff[mindex(i,47,j)] ; // diffuse into N2
 							doublereal dVidz; dVidz = 0.0;
 							dVidz = (Vi[j] - Vi[j-1])/m_dz[j];
-        	      				
+        	      					// Modified by V.Kandala, Nov 2020.
+							if (i !=j) {
 							sum1 =  X(x,i,j)  * m_dthermal(k,j) ; 
 							sum1 *= (1.0)/( m_wt[k] * m_multidiff[mindex(k,i,j)] );
 							sum1 *= Vk[j] - Vi[j];
@@ -691,6 +692,7 @@ namespace Cantera {
 							sum4 *= 1.0/( m_wt[k] * m_multidiff[mindex(k,i,j)] );
 							sum4 *= Vk[j] - Vi[j];
 							sumD4 += sum4;
+								}
  						} // end mytwo loop
 					} //end myone loop
  						

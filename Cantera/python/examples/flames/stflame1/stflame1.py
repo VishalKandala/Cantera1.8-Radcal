@@ -32,7 +32,7 @@ tsurf      =   600.0
 # and then that solution will be used for the next mdot
 mdot       =   [0.06, 0.07, 0.08, 0.09, 0.1, 0.11, 0.12]                  # kg/m^2/s
 
-rxnmech    =  'h2o2.cti'            # reaction mechanism file
+rxnmech    =  'h2o2.cti'           # reaction mechanism file
 comp       =  'H2:1.8, O2:1, AR:7'  # premixed gas composition
 
 # The solution domain is chosen to be 50 cm, and a point very near the
@@ -45,7 +45,7 @@ tol_ss    = [1.0e-5, 1.0e-13]        # [rtol atol] for steady-state
                                     # problem
 tol_ts    = [1.0e-4, 1.0e-9]        # [rtol atol] for time stepping
 
-loglevel  = 1                       # amount of diagnostic output (0
+loglevel  = 5                       # amount of diagnostic output (0
                                     # to 5)
 				    
 refine_grid = 1                     # 1 to enable refinement, 0 to

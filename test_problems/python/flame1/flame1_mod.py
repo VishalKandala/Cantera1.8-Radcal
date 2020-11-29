@@ -8,6 +8,9 @@ from Cantera import *
 from Cantera.OneD import *
 from Cantera.OneD.BurnerFlame import BurnerFlame
 
+def breakpoint():
+    import os, signal
+    os.kill(os.getpid(), signal.SIGTRAP)
 ################################################################
 #
 # parameter values
@@ -23,14 +26,13 @@ comp       =  'H2:1.8, O2:1, AR:7'  # premixed gas composition
 # The solution domain is chosen to be 50 cm, and a point very near the
 # downstream boundary is added to help with the zero-gradient boundary
 # condition at this boundary.
-initial_grid = [0.0, 0.02, 0.04, 0.06, 0.08, 0.1,
-                0.15, 0.2, 0.4, 0.49, 0.5]  # m
+initial_grid = [0.0, 0.02, 0.04, 0.06, 0.08, 0.1, 0.2, 0.3, 0.4, 0.5]  # m
 
-tol_ss    = [1.0e-5, 1.0e-13]        # [rtol atol] for steady-state
+tol_ss    = [1.0e-4, 1.0e-11]        # [rtol atol] for steady-state
                                     # problem
 tol_ts    = [1.0e-5, 1.0e-11]        # [rtol atol] for time stepping
 
-loglevel  = 2                       # amount of diagnostic output (0
+loglevel  = 5                       # amount of diagnostic output (0
                                     # to 5)
 				    
 refine_grid = 0                     # 1 to enable refinement, 0 to
@@ -62,6 +64,7 @@ f.solve(loglevel, refine_grid)
 
 f.setRefineCriteria(ratio = 200.0, slope = 0.0502, curve = 0.1)
 f.set(energy = 'on')
+breakpoint()
 f.solve(loglevel,refine_grid)
 
 f.save('flame1.xml')

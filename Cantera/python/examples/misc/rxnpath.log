@@ -1,0 +1,871 @@
+
+Reaction 1: 2 O + M <=> O2 + M ... OK.
+
+Reaction 2: O + H + M <=> OH + M ... OK.
+
+Reaction 3: O + H2 <=> H + OH ... OK.
+
+Reaction 4: O + HO2 <=> OH + O2 ... ambiguous.
+     (O) + (O)(O-H) = (O)(O) + (O-H)   [<= default] 
+     (O) + (H)(O2) = (O)(H) + (O2)
+
+Reaction 5: O + H2O2 <=> OH + HO2 ... ambiguous.
+     (O) + (H)(O2-H) = (O)(H) + (O2-H)   [<= default] 
+     (O) + (O-H)(O-H) = (O)(O-H) + (O-H)
+
+Reaction 6: O + CH <=> H + CO ... OK.
+
+Reaction 7: O + CH2 <=> H + HCO ... OK.
+
+Reaction 8: O + CH2(S) <=> H2 + CO ... OK.
+
+Reaction 9: O + CH2(S) <=> H + HCO ... OK.
+
+Reaction 10: O + CH3 <=> H + CH2O ... OK.
+
+Reaction 11: O + CH4 <=> OH + CH3 ... OK.
+
+Reaction 12: O + CO (+ M) <=> CO2 (+ M) ... OK.
+
+Reaction 13: O + HCO <=> OH + CO ... ambiguous.
+     (O) + (H)(O-C) = (O)(H) + (O-C)   [<= default] 
+     (O) + (C)(O-H) = (O)(C) + (O-H)
+
+Reaction 14: O + HCO <=> H + CO2 ... OK.
+
+Reaction 15: O + CH2O <=> OH + HCO ... ambiguous.
+     (O) + (H)(O-H-C) = (O)(H) + (O-H-C)   [<= default] 
+     (O) + (H-C)(O-H) = (O)(H-C) + (O-H)
+
+Reaction 16: O + CH2OH <=> OH + CH2O ... ambiguous.
+     (O) + (H)(O-H2-C) = (O)(H) + (O-H2-C)   [<= default] 
+     (O) + (H2-C)(O-H) = (O)(H2-C) + (O-H)
+
+Reaction 17: O + CH3O <=> OH + CH2O ... ambiguous.
+     (O) + (H)(O-H2-C) = (O)(H) + (O-H2-C)   [<= default] 
+     (O) + (H2-C)(O-H) = (O)(H2-C) + (O-H)
+
+Reaction 18: O + CH3OH <=> OH + CH2OH ... ambiguous.
+     (O) + (H)(O-H3-C) = (O)(H) + (O-H3-C)   [<= default] 
+     (O) + (H3-C)(O-H) = (O)(H3-C) + (O-H)
+
+Reaction 19: O + CH3OH <=> OH + CH3O ... ambiguous.
+     (O) + (H)(O-H3-C) = (O)(H) + (O-H3-C)   [<= default] 
+     (O) + (H3-C)(O-H) = (O)(H3-C) + (O-H)
+
+Reaction 20: O + C2H <=> CH + CO ... OK.
+
+Reaction 21: O + C2H2 <=> H + HCCO ... OK.
+
+Reaction 22: O + C2H2 <=> OH + C2H ... OK.
+
+Reaction 23: O + C2H2 <=> CO + CH2 ... OK.
+
+Reaction 24: O + C2H3 <=> H + CH2CO ... OK.
+
+Reaction 25: O + C2H4 <=> CH3 + HCO ... OK.
+
+Reaction 26: O + C2H5 <=> CH3 + CH2O ... OK.
+
+Reaction 27: O + C2H6 <=> OH + C2H5 ... OK.
+
+Reaction 28: O + HCCO <=> H + 2 CO... cannot parse. [ignored]
+
+Reaction 29: O + CH2CO <=> OH + HCCO ... ambiguous.
+     (O) + (H)(O-H-C2) = (O)(H) + (O-H-C2)   [<= default] 
+     (O) + (H-C2)(O-H) = (O)(H-C2) + (O-H)
+
+Reaction 30: O + CH2CO <=> CH2 + CO2 ... OK.
+
+Reaction 31: O2 + CO <=> O + CO2 ... ambiguous.
+     (O-C) + (O)(O) = (O-C)(O) + (O)   [<= default] 
+     (O2) + (C)(O) = (O2)(C) + (O)
+
+Reaction 32: O2 + CH2O <=> HO2 + HCO
+     (O2) + (H)(O-H-C) = (O2)(H) + (O-H-C)
+
+Reaction 33: H + O2 + M <=> HO2 + M ... OK.
+
+Reaction 34: H + 2 O2 <=> HO2 + O2 ... OK.
+
+Reaction 35: H + O2 + H2O <=> HO2 + H2O ... OK.
+
+Reaction 36: H + O2 + N2 <=> HO2 + N2 ... OK.
+
+Reaction 37: H + O2 + AR <=> HO2 + AR ... OK.
+
+Reaction 38: H + O2 <=> O + OH ... OK.
+
+Reaction 39: 2 H + M <=> H2 + M ... OK.
+
+Reaction 40: 2 H + H2 <=> 2 H2 ... OK.
+
+Reaction 41: 2 H + H2O <=> H2 + H2O ... OK.
+
+Reaction 42: 2 H + CO2 <=> H2 + CO2 ... OK.
+
+Reaction 43: H + OH + M <=> H2O + M ... OK.
+
+Reaction 44: H + HO2 <=> O + H2O ... OK.
+
+Reaction 45: H + HO2 <=> O2 + H2 ... OK.
+
+Reaction 46: H + HO2 <=> 2 OH ... ambiguous.
+     (H) + (O)(O-H) = (H)(O) + (O-H)   [<= default] 
+     (H) + (O)(O-H) = (H)(O) + (O-H)
+
+Reaction 47: H + H2O2 <=> HO2 + H2 ... ambiguous.
+     (H) + (H)(O2-H) = (H)(H) + (O2-H)   [<= default] 
+     (H) + (O2)(H2) = (H)(O2) + (H2)
+
+Reaction 48: H + H2O2 <=> OH + H2O ... ambiguous.
+     (H) + (O)(O-H2) = (H)(O) + (O-H2)   [<= default] 
+     (H) + (O-H)(O-H) = (H)(O-H) + (O-H)
+
+Reaction 49: H + CH <=> C + H2 ... OK.
+
+Reaction 50: H + CH2 (+ M) <=> CH3 (+ M) ... OK.
+
+Reaction 51: H + CH2(S) <=> CH + H2 ... ambiguous.
+     (H) + (H)(H-C) = (H)(H) + (H-C)   [<= default] 
+     (H) + (C)(H2) = (H)(C) + (H2)
+
+Reaction 52: H + CH3 (+ M) <=> CH4 (+ M) ... OK.
+
+Reaction 53: H + CH4 <=> CH3 + H2 ... ambiguous.
+     (H) + (H)(H3-C) = (H)(H) + (H3-C)   [<= default] 
+     (H) + (H2-C)(H2) = (H)(H2-C) + (H2)
+
+Reaction 54: H + HCO (+ M) <=> CH2O (+ M) ... OK.
+
+Reaction 55: H + HCO <=> H2 + CO ... OK.
+
+Reaction 56: H + CH2O (+ M) <=> CH2OH (+ M) ... OK.
+
+Reaction 57: H + CH2O (+ M) <=> CH3O (+ M) ... OK.
+
+Reaction 58: H + CH2O <=> HCO + H2 ... ambiguous.
+     (H) + (H)(O-H-C) = (H)(H) + (O-H-C)   [<= default] 
+     (H) + (O-C)(H2) = (H)(O-C) + (H2)
+
+Reaction 59: H + CH2OH (+ M) <=> CH3OH (+ M) ... OK.
+
+Reaction 60: H + CH2OH <=> H2 + CH2O ... ambiguous.
+     (H) + (H)(O-H2-C) = (H)(H) + (O-H2-C)   [<= default] 
+     (H) + (O-H-C)(H2) = (H)(O-H-C) + (H2)
+
+Reaction 61: H + CH2OH <=> OH + CH3 ... ambiguous.
+     (H) + (O)(H3-C) = (H)(O) + (H3-C)   [<= default] 
+     (H) + (H2-C)(O-H) = (H)(H2-C) + (O-H)
+
+Reaction 62: H + CH2OH <=> CH2(S) + H2O ... ambiguous.
+     (H) + (O-H)(H2-C) = (H)(O-H) + (H2-C)   [<= default] 
+     (H) + (H-C)(O-H2) = (H)(H-C) + (O-H2)
+
+Reaction 63: H + CH3O (+ M) <=> CH3OH (+ M) ... OK.
+
+Reaction 64: H + CH3O <=> H + CH2OH ... OK.
+
+Reaction 65: H + CH3O <=> H2 + CH2O ... ambiguous.
+     (H) + (H)(O-H2-C) = (H)(H) + (O-H2-C)   [<= default] 
+     (H) + (O-H-C)(H2) = (H)(O-H-C) + (H2)
+
+Reaction 66: H + CH3O <=> OH + CH3 ... ambiguous.
+     (H) + (O)(H3-C) = (H)(O) + (H3-C)   [<= default] 
+     (H) + (H2-C)(O-H) = (H)(H2-C) + (O-H)
+
+Reaction 67: H + CH3O <=> CH2(S) + H2O ... ambiguous.
+     (H) + (O-H)(H2-C) = (H)(O-H) + (H2-C)   [<= default] 
+     (H) + (H-C)(O-H2) = (H)(H-C) + (O-H2)
+
+Reaction 68: H + CH3OH <=> CH2OH + H2 ... ambiguous.
+     (H) + (H)(O-H3-C) = (H)(H) + (O-H3-C)   [<= default] 
+     (H) + (O-H2-C)(H2) = (H)(O-H2-C) + (H2)
+
+Reaction 69: H + CH3OH <=> CH3O + H2 ... ambiguous.
+     (H) + (H)(O-H3-C) = (H)(H) + (O-H3-C)   [<= default] 
+     (H) + (O-H2-C)(H2) = (H)(O-H2-C) + (H2)
+
+Reaction 70: H + C2H (+ M) <=> C2H2 (+ M) ... OK.
+
+Reaction 71: H + C2H2 (+ M) <=> C2H3 (+ M) ... OK.
+
+Reaction 72: H + C2H3 (+ M) <=> C2H4 (+ M) ... OK.
+
+Reaction 73: H + C2H3 <=> H2 + C2H2 ... ambiguous.
+     (H) + (H)(H2-C2) = (H)(H) + (H2-C2)   [<= default] 
+     (H) + (H-C2)(H2) = (H)(H-C2) + (H2)
+
+Reaction 74: H + C2H4 (+ M) <=> C2H5 (+ M) ... OK.
+
+Reaction 75: H + C2H4 <=> C2H3 + H2 ... ambiguous.
+     (H) + (H)(H3-C2) = (H)(H) + (H3-C2)   [<= default] 
+     (H) + (H2-C2)(H2) = (H)(H2-C2) + (H2)
+
+Reaction 76: H + C2H5 (+ M) <=> C2H6 (+ M) ... OK.
+
+Reaction 77: H + C2H5 <=> H2 + C2H4 ... ambiguous.
+     (H) + (H)(H4-C2) = (H)(H) + (H4-C2)   [<= default] 
+     (H) + (H3-C2)(H2) = (H)(H3-C2) + (H2)
+
+Reaction 78: H + C2H6 <=> C2H5 + H2 ... ambiguous.
+     (H) + (H)(H5-C2) = (H)(H) + (H5-C2)   [<= default] 
+     (H) + (H4-C2)(H2) = (H)(H4-C2) + (H2)
+
+Reaction 79: H + HCCO <=> CH2(S) + CO ... OK.
+
+Reaction 80: H + CH2CO <=> HCCO + H2 ... ambiguous.
+     (H) + (H)(O-H-C2) = (H)(H) + (O-H-C2)   [<= default] 
+     (H) + (O-C2)(H2) = (H)(O-C2) + (H2)
+
+Reaction 81: H + CH2CO <=> CH3 + CO ... OK.
+
+Reaction 82: H + HCCOH <=> H + CH2CO ... OK.
+
+Reaction 83: H2 + CO (+ M) <=> CH2O (+ M) ... OK.
+
+Reaction 84: OH + H2 <=> H + H2O ... ambiguous.
+     (O-H) + (H)(H) = (O-H)(H) + (H)   [<= default] 
+     (H2) + (O)(H) = (H2)(O) + (H)
+
+Reaction 85: 2 OH (+ M) <=> H2O2 (+ M) ... OK.
+
+Reaction 86: 2 OH <=> O + H2O ... ambiguous.
+     (O-H) + (H)(O) = (O-H)(H) + (O)   [<= default] 
+     (O-H) + (H)(O) = (O-H)(H) + (O)
+
+Reaction 87: OH + HO2 <=> O2 + H2O
+     (O-H) + (H)(O2) = (O-H)(H) + (O2)
+
+Reaction 88: OH + H2O2 <=> HO2 + H2O ... ambiguous.
+     (O-H) + (H)(O2-H) = (O-H)(H) + (O2-H)   [<= default] 
+     (O-H) + (O)(O-H2) = (O-H)(O) + (O-H2)
+
+Reaction 89: OH + H2O2 <=> HO2 + H2O ... ambiguous.
+     (O-H) + (H)(O2-H) = (O-H)(H) + (O2-H)   [<= default] 
+     (O-H) + (O)(O-H2) = (O-H)(O) + (O-H2)
+
+Reaction 90: OH + C <=> H + CO ... OK.
+
+Reaction 91: OH + CH <=> H + HCO ... ambiguous.
+     (H-C) + (O)(H) = (H-C)(O) + (H)   [<= default] 
+     (O-H) + (C)(H) = (O-H)(C) + (H)
+
+Reaction 92: OH + CH2 <=> H + CH2O ... ambiguous.
+     (H2-C) + (O)(H) = (H2-C)(O) + (H)   [<= default] 
+     (O-H) + (H-C)(H) = (O-H)(H-C) + (H)
+
+Reaction 93: OH + CH2 <=> CH + H2O
+     (O-H) + (H)(H-C) = (O-H)(H) + (H-C)
+
+Reaction 94: OH + CH2(S) <=> H + CH2O ... ambiguous.
+     (H2-C) + (O)(H) = (H2-C)(O) + (H)   [<= default] 
+     (O-H) + (H-C)(H) = (O-H)(H-C) + (H)
+
+Reaction 95: OH + CH3 (+ M) <=> CH3OH (+ M) ... OK.
+
+Reaction 96: OH + CH3 <=> CH2 + H2O
+     (O-H) + (H)(H2-C) = (O-H)(H) + (H2-C)
+
+Reaction 97: OH + CH3 <=> CH2(S) + H2O
+     (O-H) + (H)(H2-C) = (O-H)(H) + (H2-C)
+
+Reaction 98: OH + CH4 <=> CH3 + H2O
+     (O-H) + (H)(H3-C) = (O-H)(H) + (H3-C)
+
+Reaction 99: OH + CO <=> H + CO2 ... OK.
+
+Reaction 100: OH + HCO <=> H2O + CO
+     (O-H) + (H)(O-C) = (O-H)(H) + (O-C)
+
+Reaction 101: OH + CH2O <=> HCO + H2O ... ambiguous.
+     (O-H) + (H)(O-H-C) = (O-H)(H) + (O-H-C)   [<= default] 
+     (O-H) + (C)(O-H2) = (O-H)(C) + (O-H2)
+
+Reaction 102: OH + CH2OH <=> H2O + CH2O ... ambiguous.
+     (O-H) + (H)(O-H2-C) = (O-H)(H) + (O-H2-C)   [<= default] 
+     (O-H) + (H-C)(O-H2) = (O-H)(H-C) + (O-H2)
+
+Reaction 103: OH + CH3O <=> H2O + CH2O ... ambiguous.
+     (O-H) + (H)(O-H2-C) = (O-H)(H) + (O-H2-C)   [<= default] 
+     (O-H) + (H-C)(O-H2) = (O-H)(H-C) + (O-H2)
+
+Reaction 104: OH + CH3OH <=> CH2OH + H2O ... ambiguous.
+     (O-H) + (H)(O-H3-C) = (O-H)(H) + (O-H3-C)   [<= default] 
+     (O-H) + (H2-C)(O-H2) = (O-H)(H2-C) + (O-H2)
+
+Reaction 105: OH + CH3OH <=> CH3O + H2O ... ambiguous.
+     (O-H) + (H)(O-H3-C) = (O-H)(H) + (O-H3-C)   [<= default] 
+     (O-H) + (H2-C)(O-H2) = (O-H)(H2-C) + (O-H2)
+
+Reaction 106: OH + C2H <=> H + HCCO ... ambiguous.
+     (H-C2) + (O)(H) = (H-C2)(O) + (H)   [<= default] 
+     (O-H) + (C2)(H) = (O-H)(C2) + (H)
+
+Reaction 107: OH + C2H2 <=> H + CH2CO ... ambiguous.
+     (H2-C2) + (O)(H) = (H2-C2)(O) + (H)   [<= default] 
+     (O-H) + (H-C2)(H) = (O-H)(H-C2) + (H)
+
+Reaction 108: OH + C2H2 <=> H + HCCOH ... ambiguous.
+     (H2-C2) + (O)(H) = (H2-C2)(O) + (H)   [<= default] 
+     (O-H) + (H-C2)(H) = (O-H)(H-C2) + (H)
+
+Reaction 109: OH + C2H2 <=> C2H + H2O
+     (O-H) + (H)(H-C2) = (O-H)(H) + (H-C2)
+
+Reaction 110: OH + C2H2 <=> CH3 + CO ... OK.
+
+Reaction 111: OH + C2H3 <=> H2O + C2H2
+     (O-H) + (H)(H2-C2) = (O-H)(H) + (H2-C2)
+
+Reaction 112: OH + C2H4 <=> C2H3 + H2O
+     (O-H) + (H)(H3-C2) = (O-H)(H) + (H3-C2)
+
+Reaction 113: OH + C2H6 <=> C2H5 + H2O
+     (O-H) + (H)(H5-C2) = (O-H)(H) + (H5-C2)
+
+Reaction 114: OH + CH2CO <=> HCCO + H2O ... ambiguous.
+     (O-H) + (H)(O-H-C2) = (O-H)(H) + (O-H-C2)   [<= default] 
+     (O-H) + (C2)(O-H2) = (O-H)(C2) + (O-H2)
+
+Reaction 115: 2 HO2 <=> O2 + H2O2 ... ambiguous.
+     (O2-H) + (H)(O2) = (O2-H)(H) + (O2)   [<= default] 
+     (O2-H) + (H)(O2) = (O2-H)(H) + (O2)
+
+Reaction 116: 2 HO2 <=> O2 + H2O2 ... ambiguous.
+     (O2-H) + (H)(O2) = (O2-H)(H) + (O2)   [<= default] 
+     (O2-H) + (H)(O2) = (O2-H)(H) + (O2)
+
+Reaction 117: HO2 + CH2 <=> OH + CH2O
+     (H2-C) + (O)(O-H) = (H2-C)(O) + (O-H)
+
+Reaction 118: HO2 + CH3 <=> O2 + CH4 ... OK.
+
+Reaction 119: HO2 + CH3 <=> OH + CH3O
+     (H3-C) + (O)(O-H) = (H3-C)(O) + (O-H)
+
+Reaction 120: HO2 + CO <=> OH + CO2
+     (O-C) + (O)(O-H) = (O-C)(O) + (O-H)
+
+Reaction 121: HO2 + CH2O <=> HCO + H2O2
+     (O2-H) + (H)(O-H-C) = (O2-H)(H) + (O-H-C)
+
+Reaction 122: C + O2 <=> O + CO ... OK.
+
+Reaction 123: C + CH2 <=> H + C2H ... OK.
+
+Reaction 124: C + CH3 <=> H + C2H2 ... OK.
+
+Reaction 125: CH + O2 <=> O + HCO ... OK.
+
+Reaction 126: CH + H2 <=> H + CH2 ... ambiguous.
+     (H-C) + (H)(H) = (H-C)(H) + (H)   [<= default] 
+     (H2) + (C)(H) = (H2)(C) + (H)
+
+Reaction 127: CH + H2O <=> H + CH2O ... ambiguous.
+     (H-C) + (O-H)(H) = (H-C)(O-H) + (H)   [<= default] 
+     (O-H2) + (C)(H) = (O-H2)(C) + (H)
+
+Reaction 128: CH + CH2 <=> H + C2H2 ... ambiguous.
+     (H2-C) + (C)(H) = (H2-C)(C) + (H)   [<= default] 
+     (H-C) + (H-C)(H) = (H-C)(H-C) + (H)
+
+Reaction 129: CH + CH3 <=> H + C2H3 ... ambiguous.
+     (H3-C) + (C)(H) = (H3-C)(C) + (H)   [<= default] 
+     (H-C) + (H2-C)(H) = (H-C)(H2-C) + (H)
+
+Reaction 130: CH + CH4 <=> H + C2H4 ... ambiguous.
+     (H4-C) + (C)(H) = (H4-C)(C) + (H)   [<= default] 
+     (H-C) + (H3-C)(H) = (H-C)(H3-C) + (H)
+
+Reaction 131: CH + CO (+ M) <=> HCCO (+ M) ... OK.
+
+Reaction 132: CH + CO2 <=> HCO + CO
+     (H-C) + (O)(O-C) = (H-C)(O) + (O-C)
+
+Reaction 133: CH + CH2O <=> H + CH2CO ... ambiguous.
+     (O-H2-C) + (C)(H) = (O-H2-C)(C) + (H)   [<= default] 
+     (H-C) + (O-H-C)(H) = (H-C)(O-H-C) + (H)
+
+Reaction 134: CH + HCCO <=> CO + C2H2
+     (H-C) + (H-C)(O-C) = (H-C)(H-C) + (O-C)
+
+Reaction 135: CH2 + O2 => OH + H + CO ... OK.
+
+Reaction 136: CH2 + H2 <=> H + CH3 ... ambiguous.
+     (H2-C) + (H)(H) = (H2-C)(H) + (H)   [<= default] 
+     (H2) + (H-C)(H) = (H2)(H-C) + (H)
+
+Reaction 137: 2 CH2 <=> H2 + C2H2 ... ambiguous.
+     (H2-C) + (C)(H2) = (H2-C)(C) + (H2)   [<= default] 
+     (H2-C) + (C)(H2) = (H2-C)(C) + (H2)
+
+Reaction 138: CH2 + CH3 <=> H + C2H4 ... ambiguous.
+     (H3-C) + (H-C)(H) = (H3-C)(H-C) + (H)   [<= default] 
+     (H2-C) + (H2-C)(H) = (H2-C)(H2-C) + (H)
+
+Reaction 139: CH2 + CH4 <=> 2 CH3 ... ambiguous.
+     (H2-C) + (H)(H3-C) = (H2-C)(H) + (H3-C)   [<= default] 
+     (H2-C) + (H)(H3-C) = (H2-C)(H) + (H3-C)
+
+Reaction 140: CH2 + CO (+ M) <=> CH2CO (+ M) ... OK.
+
+Reaction 141: CH2 + HCCO <=> C2H3 + CO
+     (H2-C) + (H-C)(O-C) = (H2-C)(H-C) + (O-C)
+
+Reaction 142: CH2(S) + N2 <=> CH2 + N2 ... OK.
+
+Reaction 143: CH2(S) + AR <=> CH2 + AR ... OK.
+
+Reaction 144: CH2(S) + O2 <=> H + OH + CO ... OK.
+
+Reaction 145: CH2(S) + O2 <=> CO + H2O ... OK.
+
+Reaction 146: CH2(S) + H2 <=> CH3 + H ... ambiguous.
+     (H2-C) + (H)(H) = (H2-C)(H) + (H)   [<= default] 
+     (H2) + (H-C)(H) = (H2)(H-C) + (H)
+
+Reaction 147: CH2(S) + H2O (+ M) <=> CH3OH (+ M) ... OK.
+
+Reaction 148: CH2(S) + H2O <=> CH2 + H2O ... OK.
+
+Reaction 149: CH2(S) + CH3 <=> H + C2H4 ... ambiguous.
+     (H3-C) + (H-C)(H) = (H3-C)(H-C) + (H)   [<= default] 
+     (H2-C) + (H2-C)(H) = (H2-C)(H2-C) + (H)
+
+Reaction 150: CH2(S) + CH4 <=> 2 CH3 ... ambiguous.
+     (H2-C) + (H)(H3-C) = (H2-C)(H) + (H3-C)   [<= default] 
+     (H2-C) + (H)(H3-C) = (H2-C)(H) + (H3-C)
+
+Reaction 151: CH2(S) + CO <=> CH2 + CO ... OK.
+
+Reaction 152: CH2(S) + CO2 <=> CH2 + CO2 ... OK.
+
+Reaction 153: CH2(S) + CO2 <=> CO + CH2O
+     (H2-C) + (O)(O-C) = (H2-C)(O) + (O-C)
+
+Reaction 154: CH2(S) + C2H6 <=> CH3 + C2H5 ... ambiguous.
+     (H2-C) + (H)(H5-C2) = (H2-C)(H) + (H5-C2)   [<= default] 
+     (H2-C) + (H3-C)(H3-C) = (H2-C)(H3-C) + (H3-C)
+
+Reaction 155: CH3 + O2 <=> O + CH3O ... OK.
+
+Reaction 156: CH3 + O2 <=> OH + CH2O ... OK.
+
+Reaction 157: CH3 + H2O2 <=> HO2 + CH4
+     (H3-C) + (H)(O2-H) = (H3-C)(H) + (O2-H)
+
+Reaction 158: 2 CH3 (+ M) <=> C2H6 (+ M) ... OK.
+
+Reaction 159: 2 CH3 <=> H + C2H5 ... ambiguous.
+     (H3-C) + (H2-C)(H) = (H3-C)(H2-C) + (H)   [<= default] 
+     (H3-C) + (H2-C)(H) = (H3-C)(H2-C) + (H)
+
+Reaction 160: CH3 + HCO <=> CH4 + CO
+     (H3-C) + (H)(O-C) = (H3-C)(H) + (O-C)
+
+Reaction 161: CH3 + CH2O <=> HCO + CH4
+     (H3-C) + (H)(O-H-C) = (H3-C)(H) + (O-H-C)
+
+Reaction 162: CH3 + CH3OH <=> CH2OH + CH4 ... ambiguous.
+     (H3-C) + (H)(O-H3-C) = (H3-C)(H) + (O-H3-C)   [<= default] 
+     (H3-C) + (O)(H4-C) = (H3-C)(O) + (H4-C)
+
+Reaction 163: CH3 + CH3OH <=> CH3O + CH4 ... ambiguous.
+     (H3-C) + (H)(O-H3-C) = (H3-C)(H) + (O-H3-C)   [<= default] 
+     (H3-C) + (O)(H4-C) = (H3-C)(O) + (H4-C)
+
+Reaction 164: CH3 + C2H4 <=> C2H3 + CH4 ... ambiguous.
+     (H3-C) + (H)(H3-C2) = (H3-C)(H) + (H3-C2)   [<= default] 
+     (H3-C) + (C)(H4-C) = (H3-C)(C) + (H4-C)
+
+Reaction 165: CH3 + C2H6 <=> C2H5 + CH4 ... ambiguous.
+     (H3-C) + (H)(H5-C2) = (H3-C)(H) + (H5-C2)   [<= default] 
+     (H3-C) + (H2-C)(H4-C) = (H3-C)(H2-C) + (H4-C)
+
+Reaction 166: HCO + H2O <=> H + CO + H2O ... OK.
+
+Reaction 167: HCO + M <=> H + CO + M ... OK.
+
+Reaction 168: HCO + O2 <=> HO2 + CO
+     (O2) + (H)(O-C) = (O2)(H) + (O-C)
+
+Reaction 169: CH2OH + O2 <=> HO2 + CH2O
+     (O2) + (H)(O-H2-C) = (O2)(H) + (O-H2-C)
+
+Reaction 170: CH3O + O2 <=> HO2 + CH2O
+     (O2) + (H)(O-H2-C) = (O2)(H) + (O-H2-C)
+
+Reaction 171: C2H + O2 <=> HCO + CO ... OK.
+
+Reaction 172: C2H + H2 <=> H + C2H2 ... ambiguous.
+     (H-C2) + (H)(H) = (H-C2)(H) + (H)   [<= default] 
+     (H2) + (C2)(H) = (H2)(C2) + (H)
+
+Reaction 173: C2H3 + O2 <=> HCO + CH2O ... OK.
+
+Reaction 174: C2H4 (+ M) <=> H2 + C2H2 (+ M) ... OK.
+
+Reaction 175: C2H5 + O2 <=> HO2 + C2H4 ... OK.
+
+Reaction 176: HCCO + O2 <=> OH + 2 CO... cannot parse. [ignored]
+
+Reaction 177: 2 HCCO <=> 2 CO + C2H2... cannot parse. [ignored]
+
+Reaction 178: N + NO <=> N2 + O ... OK.
+
+Reaction 179: N + O2 <=> NO + O ... OK.
+
+Reaction 180: N + OH <=> NO + H ... OK.
+
+Reaction 181: N2O + O <=> N2 + O2 ... OK.
+
+Reaction 182: N2O + O <=> 2 NO ... ambiguous.
+     (O) + (N)(O-N) = (O)(N) + (O-N)   [<= default] 
+     (O) + (N)(O-N) = (O)(N) + (O-N)
+
+Reaction 183: N2O + H <=> N2 + OH ... OK.
+
+Reaction 184: N2O + OH <=> N2 + HO2 ... OK.
+
+Reaction 185: N2O (+ M) <=> N2 + O (+ M) ... OK.
+
+Reaction 186: HO2 + NO <=> NO2 + OH
+     (O-N) + (O)(O-H) = (O-N)(O) + (O-H)
+
+Reaction 187: NO + O + M <=> NO2 + M ... OK.
+
+Reaction 188: NO2 + O <=> NO + O2 ... ambiguous.
+     (O) + (O)(O-N) = (O)(O) + (O-N)   [<= default] 
+     (O) + (N)(O2) = (O)(N) + (O2)
+
+Reaction 189: NO2 + H <=> NO + OH ... OK.
+
+Reaction 190: NH + O <=> NO + H ... OK.
+
+Reaction 191: NH + H <=> N + H2 ... OK.
+
+Reaction 192: NH + OH <=> HNO + H ... ambiguous.
+     (H-N) + (O)(H) = (H-N)(O) + (H)   [<= default] 
+     (O-H) + (N)(H) = (O-H)(N) + (H)
+
+Reaction 193: NH + OH <=> N + H2O ... OK.
+
+Reaction 194: NH + O2 <=> HNO + O ... OK.
+
+Reaction 195: NH + O2 <=> NO + OH ... OK.
+
+Reaction 196: NH + N <=> N2 + H ... OK.
+
+Reaction 197: NH + H2O <=> HNO + H2
+     (H-N) + (O)(H2) = (H-N)(O) + (H2)
+
+Reaction 198: NH + NO <=> N2 + OH ... OK.
+
+Reaction 199: NH + NO <=> N2O + H ... OK.
+
+Reaction 200: NH2 + O <=> OH + NH ... OK.
+
+Reaction 201: NH2 + O <=> H + HNO ... OK.
+
+Reaction 202: NH2 + H <=> NH + H2 ... ambiguous.
+     (H) + (H)(H-N) = (H)(H) + (H-N)   [<= default] 
+     (H) + (N)(H2) = (H)(N) + (H2)
+
+Reaction 203: NH2 + OH <=> NH + H2O
+     (O-H) + (H)(H-N) = (O-H)(H) + (H-N)
+
+Reaction 204: NNH <=> N2 + H ... OK.
+
+Reaction 205: NNH + M <=> N2 + H + M ... OK.
+
+Reaction 206: NNH + O2 <=> HO2 + N2 ... OK.
+
+Reaction 207: NNH + O <=> OH + N2 ... OK.
+
+Reaction 208: NNH + O <=> NH + NO ... OK.
+
+Reaction 209: NNH + H <=> H2 + N2 ... OK.
+
+Reaction 210: NNH + OH <=> H2O + N2 ... OK.
+
+Reaction 211: NNH + CH3 <=> CH4 + N2 ... OK.
+
+Reaction 212: H + NO + M <=> HNO + M ... OK.
+
+Reaction 213: HNO + O <=> NO + OH ... ambiguous.
+     (O) + (H)(O-N) = (O)(H) + (O-N)   [<= default] 
+     (O) + (N)(O-H) = (O)(N) + (O-H)
+
+Reaction 214: HNO + H <=> H2 + NO ... OK.
+
+Reaction 215: HNO + OH <=> NO + H2O
+     (O-H) + (H)(O-N) = (O-H)(H) + (O-N)
+
+Reaction 216: HNO + O2 <=> HO2 + NO
+     (O2) + (H)(O-N) = (O2)(H) + (O-N)
+
+Reaction 217: CN + O <=> CO + N ... OK.
+
+Reaction 218: CN + OH <=> NCO + H ... OK.
+
+Reaction 219: CN + H2O <=> HCN + OH ... OK.
+
+Reaction 220: CN + O2 <=> NCO + O ... OK.
+
+Reaction 221: CN + H2 <=> HCN + H ... OK.
+
+Reaction 222: NCO + O <=> NO + CO ... ambiguous.
+     (O) + (C)(O-N) = (O)(C) + (O-N)   [<= default] 
+     (O) + (N)(O-C) = (O)(N) + (O-C)
+
+Reaction 223: NCO + H <=> NH + CO ... OK.
+
+Reaction 224: NCO + OH <=> NO + H + CO... cannot parse. [ignored]
+
+Reaction 225: NCO + N <=> N2 + CO ... OK.
+
+Reaction 226: NCO + O2 <=> NO + CO2
+     (O2) + (C)(O-N) = (O2)(C) + (O-N)
+
+Reaction 227: NCO + M <=> N + CO + M ... OK.
+
+Reaction 228: NCO + NO <=> N2O + CO
+     (O-N) + (N)(O-C) = (O-N)(N) + (O-C)
+
+Reaction 229: NCO + NO <=> N2 + CO2 ... OK.
+
+Reaction 230: HCN + M <=> H + CN + M ... OK.
+
+Reaction 231: HCN + O <=> NCO + H ... OK.
+
+Reaction 232: HCN + O <=> NH + CO ... OK.
+
+Reaction 233: HCN + O <=> CN + OH ... OK.
+
+Reaction 234: HCN + OH <=> HOCN + H ... ambiguous.
+     (H-C-N) + (O)(H) = (H-C-N)(O) + (H)   [<= default] 
+     (O-H) + (C-N)(H) = (O-H)(C-N) + (H)
+
+Reaction 235: HCN + OH <=> HNCO + H ... ambiguous.
+     (H-C-N) + (O)(H) = (H-C-N)(O) + (H)   [<= default] 
+     (O-H) + (C-N)(H) = (O-H)(C-N) + (H)
+
+Reaction 236: HCN + OH <=> NH2 + CO ... OK.
+
+Reaction 237: H + HCN (+ M) <=> H2CN (+ M) ... OK.
+
+Reaction 238: H2CN + N <=> N2 + CH2 ... OK.
+
+Reaction 239: C + N2 <=> CN + N ... OK.
+
+Reaction 240: CH + N2 <=> HCN + N ... OK.
+
+Reaction 241: CH + N2 (+ M) <=> HCNN (+ M) ... OK.
+
+Reaction 242: CH2 + N2 <=> HCN + NH ... OK.
+
+Reaction 243: CH2(S) + N2 <=> NH + HCN ... OK.
+
+Reaction 244: C + NO <=> CN + O ... OK.
+
+Reaction 245: C + NO <=> CO + N ... OK.
+
+Reaction 246: CH + NO <=> HCN + O ... OK.
+
+Reaction 247: CH + NO <=> H + NCO ... OK.
+
+Reaction 248: CH + NO <=> N + HCO ... OK.
+
+Reaction 249: CH2 + NO <=> H + HNCO ... OK.
+
+Reaction 250: CH2 + NO <=> OH + HCN ... OK.
+
+Reaction 251: CH2 + NO <=> H + HCNO ... OK.
+
+Reaction 252: CH2(S) + NO <=> H + HNCO ... OK.
+
+Reaction 253: CH2(S) + NO <=> OH + HCN ... OK.
+
+Reaction 254: CH2(S) + NO <=> H + HCNO ... OK.
+
+Reaction 255: CH3 + NO <=> HCN + H2O ... OK.
+
+Reaction 256: CH3 + NO <=> H2CN + OH ... OK.
+
+Reaction 257: HCNN + O <=> CO + H + N2 ... OK.
+
+Reaction 258: HCNN + O <=> HCN + NO ... OK.
+
+Reaction 259: HCNN + O2 <=> O + HCO + N2 ... OK.
+
+Reaction 260: HCNN + OH <=> H + HCO + N2... cannot parse. [ignored]
+
+Reaction 261: HCNN + H <=> CH2 + N2 ... OK.
+
+Reaction 262: HNCO + O <=> NH + CO2 ... OK.
+
+Reaction 263: HNCO + O <=> HNO + CO ... ambiguous.
+     (O) + (C)(O-H-N) = (O)(C) + (O-H-N)   [<= default] 
+     (O) + (H-N)(O-C) = (O)(H-N) + (O-C)
+
+Reaction 264: HNCO + O <=> NCO + OH ... ambiguous.
+     (O) + (H)(O-C-N) = (O)(H) + (O-C-N)   [<= default] 
+     (O) + (C-N)(O-H) = (O)(C-N) + (O-H)
+
+Reaction 265: HNCO + H <=> NH2 + CO ... OK.
+
+Reaction 266: HNCO + H <=> H2 + NCO ... OK.
+
+Reaction 267: HNCO + OH <=> NCO + H2O
+     (O-H) + (H)(O-C-N) = (O-H)(H) + (O-C-N)
+
+Reaction 268: HNCO + OH <=> NH2 + CO2 ... OK.
+
+Reaction 269: HNCO + M <=> NH + CO + M ... OK.
+
+Reaction 270: HCNO + H <=> H + HNCO ... OK.
+
+Reaction 271: HCNO + H <=> OH + HCN ... ambiguous.
+     (H) + (O)(H-C-N) = (H)(O) + (H-C-N)   [<= default] 
+     (H) + (C-N)(O-H) = (H)(C-N) + (O-H)
+
+Reaction 272: HCNO + H <=> NH2 + CO ... OK.
+
+Reaction 273: HOCN + H <=> H + HNCO ... OK.
+
+Reaction 274: HCCO + NO <=> HCNO + CO
+     (O-N) + (H-C)(O-C) = (O-N)(H-C) + (O-C)
+
+Reaction 275: CH3 + N <=> H2CN + H ... OK.
+
+Reaction 276: CH3 + N <=> HCN + H2 ... OK.
+
+Reaction 277: NH3 + H <=> NH2 + H2 ... ambiguous.
+     (H) + (H)(H2-N) = (H)(H) + (H2-N)   [<= default] 
+     (H) + (H-N)(H2) = (H)(H-N) + (H2)
+
+Reaction 278: NH3 + OH <=> NH2 + H2O
+     (O-H) + (H)(H2-N) = (O-H)(H) + (H2-N)
+
+Reaction 279: NH3 + O <=> NH2 + OH ... OK.
+
+Reaction 280: NH + CO2 <=> HNO + CO ... OK.
+
+Reaction 281: CN + NO2 <=> NCO + NO
+     (C-N) + (O)(O-N) = (C-N)(O) + (O-N)
+
+Reaction 282: NCO + NO2 <=> N2O + CO2 ... cannot express as A + BC = AB + C
+
+Reaction 283: N + CO2 <=> NO + CO ... OK.
+
+Reaction 284: O + CH3 => H + H2 + CO ... OK.
+
+Reaction 285: O + C2H4 <=> H + CH2CHO ... OK.
+
+Reaction 286: O + C2H5 <=> H + CH3CHO ... OK.
+
+Reaction 287: OH + HO2 <=> O2 + H2O
+     (O-H) + (H)(O2) = (O-H)(H) + (O2)
+
+Reaction 288: OH + CH3 => H2 + CH2O
+     (O-H) + (H-C)(H2) = (O-H)(H-C) + (H2)
+
+Reaction 289: CH + H2 (+ M) <=> CH3 (+ M) ... OK.
+
+Reaction 290: CH2 + O2 => 2 H + CO2 ... OK.
+
+Reaction 291: CH2 + O2 <=> O + CH2O ... OK.
+
+Reaction 292: CH2 + CH2 => 2 H + C2H2... cannot parse. [ignored]
+
+Reaction 293: CH2(S) + H2O => H2 + CH2O ... ambiguous.
+     (H2-C) + (O)(H2) = (H2-C)(O) + (H2)   [<= default] 
+     (O-H2) + (C)(H2) = (O-H2)(C) + (H2)
+
+Reaction 294: C2H3 + O2 <=> O + CH2CHO ... OK.
+
+Reaction 295: C2H3 + O2 <=> HO2 + C2H2 ... OK.
+
+Reaction 296: O + CH3CHO <=> OH + CH2CHO ... ambiguous.
+     (O) + (H)(O-H3-C2) = (O)(H) + (O-H3-C2)   [<= default] 
+     (O) + (H3-C2)(O-H) = (O)(H3-C2) + (O-H)
+
+Reaction 297: O + CH3CHO => OH + CH3 + CO... cannot parse. [ignored]
+
+Reaction 298: O2 + CH3CHO => HO2 + CH3 + CO... cannot parse. [ignored]
+
+Reaction 299: H + CH3CHO <=> CH2CHO + H2 ... ambiguous.
+     (H) + (H)(O-H3-C2) = (H)(H) + (O-H3-C2)   [<= default] 
+     (H) + (O-H2-C2)(H2) = (H)(O-H2-C2) + (H2)
+
+Reaction 300: H + CH3CHO => CH3 + H2 + CO... cannot parse. [ignored]
+
+Reaction 301: OH + CH3CHO => CH3 + H2O + CO... cannot parse. [ignored]
+
+Reaction 302: HO2 + CH3CHO => CH3 + H2O2 + CO... cannot parse. [ignored]
+
+Reaction 303: CH3 + CH3CHO => CH3 + CH4 + CO ... OK.
+
+Reaction 304: H + CH2CO (+ M) <=> CH2CHO (+ M) ... OK.
+
+Reaction 305: O + CH2CHO => H + CH2 + CO2 ... OK.
+
+Reaction 306: O2 + CH2CHO => OH + CO + CH2O... cannot parse. [ignored]
+
+Reaction 307: O2 + CH2CHO => OH + 2 HCO... cannot parse. [ignored]
+
+Reaction 308: H + CH2CHO <=> CH3 + HCO ... ambiguous.
+     (H) + (H2-C)(O-H-C) = (H)(H2-C) + (O-H-C)   [<= default] 
+     (H) + (O-C)(H3-C) = (H)(O-C) + (H3-C)
+
+Reaction 309: H + CH2CHO <=> CH2CO + H2 ... ambiguous.
+     (H) + (H)(O-H2-C2) = (H)(H) + (O-H2-C2)   [<= default] 
+     (H) + (O-H-C2)(H2) = (H)(O-H-C2) + (H2)
+
+Reaction 310: OH + CH2CHO <=> H2O + CH2CO ... ambiguous.
+     (O-H) + (H)(O-H2-C2) = (O-H)(H) + (O-H2-C2)   [<= default] 
+     (O-H) + (H-C2)(O-H2) = (O-H)(H-C2) + (O-H2)
+
+Reaction 311: OH + CH2CHO <=> HCO + CH2OH ... ambiguous.
+     (O-H) + (C)(O-H3-C) = (O-H)(C) + (O-H3-C)   [<= default] 
+     (O-H) + (H2-C)(O-H-C) = (O-H)(H2-C) + (O-H-C)
+
+Reaction 312: CH3 + C2H5 (+ M) <=> C3H8 (+ M) ... OK.
+
+Reaction 313: O + C3H8 <=> OH + C3H7 ... OK.
+
+Reaction 314: H + C3H8 <=> C3H7 + H2 ... ambiguous.
+     (H) + (H)(H7-C3) = (H)(H) + (H7-C3)   [<= default] 
+     (H) + (H6-C3)(H2) = (H)(H6-C3) + (H2)
+
+Reaction 315: OH + C3H8 <=> C3H7 + H2O
+     (O-H) + (H)(H7-C3) = (O-H)(H) + (H7-C3)
+
+Reaction 316: C3H7 + H2O2 <=> HO2 + C3H8
+     (H7-C3) + (H)(O2-H) = (H7-C3)(H) + (O2-H)
+
+Reaction 317: CH3 + C3H8 <=> C3H7 + CH4 ... ambiguous.
+     (H3-C) + (H)(H7-C3) = (H3-C)(H) + (H7-C3)   [<= default] 
+     (H3-C) + (H4-C2)(H4-C) = (H3-C)(H4-C2) + (H4-C)
+
+Reaction 318: CH3 + C2H4 (+ M) <=> C3H7 (+ M) ... OK.
+
+Reaction 319: O + C3H7 <=> C2H5 + CH2O ... OK.
+
+Reaction 320: H + C3H7 (+ M) <=> C3H8 (+ M) ... OK.
+
+Reaction 321: H + C3H7 <=> CH3 + C2H5 ... ambiguous.
+     (H) + (H2-C)(H5-C2) = (H)(H2-C) + (H5-C2)   [<= default] 
+     (H) + (H4-C2)(H3-C) = (H)(H4-C2) + (H3-C)
+
+Reaction 322: OH + C3H7 <=> C2H5 + CH2OH
+     (O-H) + (H2-C)(H5-C2) = (O-H)(H2-C) + (H5-C2)
+
+Reaction 323: HO2 + C3H7 <=> O2 + C3H8 ... OK.
+
+Reaction 324: HO2 + C3H7 => OH + C2H5 + CH2O... cannot parse. [ignored]
+
+Reaction 325: CH3 + C3H7 <=> 2 C2H5 ... ambiguous.
+     (H3-C) + (H2-C)(H5-C2) = (H3-C)(H2-C) + (H5-C2)   [<= default] 
+     (H3-C) + (H2-C)(H5-C2) = (H3-C)(H2-C) + (H5-C2)
